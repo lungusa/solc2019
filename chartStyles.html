@@ -1,0 +1,217 @@
+<style media="screen">
+  /*LOCATED AT*/
+
+  /*http://www.lung.org/css/lung-cancer-atlas-styles.html*/
+
+  #subnav {
+    background: none;
+  }
+
+  #changeState {
+    margin-top: -8px;
+    float: right;
+  }
+
+
+  #changeState a {
+    background: #fff;
+    border-radius: 20px;
+    font-size: 14px;
+    cursor: pointer;
+    color: #2dc6d6;
+    padding: 12px;
+  }
+
+  #changeState a:hover {
+    background: #555559;
+    color: #fff;
+    text-decoration: none;
+  }
+
+  /*INTRO*/
+
+  #intro {
+    margin-top: 20px;
+  }
+
+  div#intro p {
+    display: none;
+    /*we have decided to remove intro copy from each state page and instead have it once on a central page*/
+    font-size: 16px;
+    line-height: 25px;
+  }
+
+  /*TABLE OF CONTENTS*/
+
+  #anchorLinks {
+    background-color: #e8e9ea;
+    margin-bottom: 30px;
+    padding: 6px 0 8px;
+  }
+
+  #anchorLinks p {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    margin-bottom: 0;
+  }
+
+  #anchorLinks p a {
+    font-weight: 700;
+  }
+
+  #firstAnchor {
+    margin-left: 5px;
+  }
+
+
+  #tocSelect {
+    /*-webkit-appearance: none;*/
+    font-family: 'lato', sans-serif;
+    font-size: 14px;
+    padding: 10px;
+    border-radius: 25px;
+    margin-bottom: 15px;
+  }
+
+  /*CALL TO ACTION HELPERS*/
+
+  .ctaSOLC {
+    background: #e8e9ea;
+    margin-bottom: 20px;
+  }
+
+  /* valign-wrapper class is from materialize.css. vertical alignment helper*/
+
+  .killMargin {
+    margin: 0px !important;
+  }
+
+  .ctaP {
+    padding: 10px;
+  }
+
+  .solcCtaBtn {
+    margin: -6px 5px 10px 5px !important;
+  }
+
+  #ctaBR {
+    display: none !important;
+  }
+
+
+
+
+  /*removing large margins in traditional HR element from lung stylesheet*/
+
+  .highcharts-menu hr {
+    margin: 0 !important;
+  }
+
+  /*bullet points adjustment = .box*/
+
+  .box li {
+    /*font-size: 15px;*/
+    /*line-height: 20px;*/
+  }
+
+  /*copy changing between states*/
+
+  .change {
+    /*color: orange;*/
+  }
+
+  .chart {
+    /*border: 1px solid #a3a9ac;*/
+    padding: 8px;
+    margin-bottom: 30px;
+    /*height: 200px;
+  background-color: #00a5db;*/
+  }
+
+  .chart3:after {content: "Hover over the bars to see data for different states."; font-size: 14px; font-style: italic; text-align: center; display: block;}
+  .chartFour:after {content: "Hover over the bars to see data for different states."; font-size: 14px; font-style: italic; text-align: center; display: block;}
+  .chart6:after {content: "Hover over the bars to see data for different states."; font-size: 14px; font-style: italic; text-align: center; display: block;}
+  .chart2:after {content: "Hover over the bars to see data for different states."; font-size: 14px; font-style: italic; text-align: center; display: block;}
+  .chart1:after {content: "Hover over the points to see data for different states."; font-size: 14px; font-style: italic; text-align: center; display: block;}
+
+  .chartExplain {
+    /*text-align: center;*/
+    /*justify-content: center;*/
+    /*padding: 20px;*/
+    /*font-size: 16px !important;*/
+  }
+
+  .backToTop {
+    color: #3a75c4;
+    cursor: pointer;
+    margin: 10px;
+  }
+
+  .backToTop:hover {
+    color: #bad80a;
+  }
+
+  @media (max-width: 1000px) {
+    /*#changeState{ font-size: 12px; }*/
+    #changeState a {
+      padding: 6px;
+    }
+  }
+
+  @media (max-width: 801px) {
+    .chart3:after {content: "Hover over or tap the bars to see data for different states."; font-size: 14px; font-style: italic; text-align: center; display: block;}
+    .chartFour:after {content: "Hover over or tap the bars to see data for different states."; font-size: 14px; font-style: italic; text-align: center; display: block;}
+    .chart6:after {content: "Hover over or tap the bars to see data for different states."; font-size: 14px; font-style: italic; text-align: center; display: block;}
+    .chart2:after {content: "Hover over or tap the bars to see data for different states."; font-size: 14px; font-style: italic; text-align: center; display: block;}
+    .chart1:after {content: "Hover over or tap the points to see data for different states."; font-size: 14px; font-style: italic; text-align: center; display: block;}
+  }
+
+
+  @media (max-width: 500px) {
+    .chart3:after {content: "Tap the bars to see data for different states."; font-size: 14px; font-style: italic; text-align: center; display: block;}
+    .chartFour:after {content: "Tap the bars to see data for different states."; font-size: 14px; font-style: italic; text-align: center; display: block;}
+    .chart6:after {content: "Tap the bars to see data for different states."; font-size: 14px; font-style: italic; text-align: center; display: block;}
+    .chart2:after {content: "Tap the bars to see data for different states."; font-size: 14px; font-style: italic; text-align: center; display: block;}
+    .chart1:after {content: "Tap the points to see data for different states."; font-size: 14px; font-style: italic; text-align: center; display: block;}
+
+
+
+    /*#changeState{ margin-top: 0px; }*/
+    #firstAnchor {
+      margin-left: 0px;
+    }
+    .solcCtaBtn {
+      float: none !important;
+      margin: 10px 0 0 !important;
+    }
+    #ctaBR {
+      display: block !important;
+    }
+    #anchorLinks p {
+      margin-left: 0px !important;
+      font-size: 16px;
+    }
+    div#intro p {
+      font-size: 16px;
+      line-height: 25px;
+    }
+    #changeState {
+      margin-top: -3px;
+      /*font-size: 14px;*/
+      /*height: 41px;*/
+      /*width: 130px;*/
+    }
+    .box li {
+      font-size: 13px;
+      line-height: 17px;
+    }
+  }
+
+  @media (max-width: 390px) {
+    #changeState {
+      float: none;
+      margin-top: 12px;
+    }
+  }
+</style>
