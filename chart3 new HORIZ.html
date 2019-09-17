@@ -1,0 +1,514 @@
+<script src="https://code.highcharts.com/highcharts.js"></script>
+<script src="https://code.highcharts.com/modules/exporting.js"></script>
+
+<style media="screen">
+  #chartDiagnosis {
+    min-width: 310px;
+    width: 100%;
+    /*height must be a minimum of 860px*/
+    /*min-height: 860px;*/
+    /*height: 1000px;*/
+    margin: 0 auto;
+  }
+
+  .highcharts-background {
+    fill: transparent;
+  }
+
+  /*body{
+    background: url("https://images.unsplash.com/photo-1463780324318-d1a8ddc05a11") no-repeat center center fixed;
+  }*/
+
+  .highcharts-title {
+    font-family: 'Lato', sans-serif !important;
+  }
+
+  .highcharts-legend {
+    font-family: 'Lato', sans-serif !important;
+  }
+
+  .highcharts-axis-labels {
+    font-family: 'Lato', sans-serif !important;
+  }
+
+  .highcharts-xaxis-labels {
+    font-family: 'Lato', sans-serif !important;
+  }
+
+  @media (max-width: 700px) {
+    #chartDiagnosis {
+      /*height: 1000px;*/
+    }
+  }
+</style>
+
+<!-- <button type="button" name="button" onclick="document.getElementById('location').click();" >change state</button> -->
+
+<!-- 860px min height before font gets messed up -->
+<div id="chartDiagnosis"></div>
+
+<script>
+  // $("#stateSelectList").on("change", function(){
+  //   setTimeout(chartDiagnosis, 500);
+  // });
+  document.getElementById("stateSelectList").addEventListener("change", function() {
+    setTimeout(chartDiagnosis, 500);
+  });
+  // $("#searchZip").on("submit", function(){
+  //   setTimeout(chartDiagnosis,1500);
+  // });
+  document.getElementById("searchZip").addEventListener("submit", function() {
+    setTimeout(chartDiagnosis, 1500);
+  })
+
+  var state = Cookies.get("state");
+
+  // var chartDataExample = {
+  //   stateAbbrev : {
+  //     distant: [topBarStageAtDiagnosis, bottomBar5YearRelativeSurvival],
+  //     regional: [topBarStageAtDiagnosis, bottomBar5YearRelativeSurvival],
+  //     localized: [topBarStageAtDiagnosis, bottomBar5YearRelativeSurvival]
+  //   }
+  // }
+  var chartData = {
+    AL: {
+      distant: [48.5, 6.0],
+      regional: [22.4, 31.0],
+      localized: [21.5, 57.7],
+      unstaged: [7.6, 14.2]
+    },
+    AK: {
+      distant: [48.5, 6.0],
+      regional: [22.4, 31.0],
+      localized: [21.5, 57.7],
+      unstaged: [7.6, 14.2]
+    },
+    AZ: {
+      distant: [48.5, 6.0],
+      regional: [22.4, 31.0],
+      localized: [21.5, 57.7],
+      unstaged: [7.6, 14.2]
+    },
+    AR: {
+      distant: [48.5, 6.0],
+      regional: [22.4, 31.0],
+      localized: [21.5, 57.7],
+      unstaged: [7.6, 14.2]
+    },
+    CA: {
+      distant: [48.5, 6.0],
+      regional: [22.4, 31.0],
+      localized: [21.5, 57.7],
+      unstaged: [7.6, 14.2]
+    },
+    CO: {
+      distant: [48.5, 6.0],
+      regional: [22.4, 31.0],
+      localized: [21.5, 57.7],
+      unstaged: [7.6, 14.2]
+    },
+    CT: {
+      distant: [48.5, 6.0],
+      regional: [22.4, 31.0],
+      localized: [21.5, 57.7],
+      unstaged: [7.6, 14.2]
+    },
+    DE: {
+      distant: [48.5, 6.0],
+      regional: [22.4, 31.0],
+      localized: [21.5, 57.7],
+      unstaged: [7.6, 14.2]
+    },
+    FL: {
+      distant: [48.5, 6.0],
+      regional: [22.4, 31.0],
+      localized: [21.5, 57.7],
+      unstaged: [7.6, 14.2]
+    },
+    GA: {
+      distant: [48.5, 6.0],
+      regional: [22.4, 31.0],
+      localized: [21.5, 57.7],
+      unstaged: [7.6, 14.2]
+    },
+    HI: {
+      distant: [48.5, 6.0],
+      regional: [22.4, 31.0],
+      localized: [21.5, 57.7],
+      unstaged: [7.6, 14.2]
+    },
+    ID: {
+      distant: [48.5, 6.0],
+      regional: [22.4, 31.0],
+      localized: [21.5, 57.7],
+      unstaged: [7.6, 14.2]
+    },
+    IL: {
+      distant: [48.5, 6.0],
+      regional: [22.4, 31.0],
+      localized: [21.5, 57.7],
+      unstaged: [7.6, 14.2]
+    },
+    IN: {
+      distant: [48.5, 6.0],
+      regional: [22.4, 31.0],
+      localized: [21.5, 57.7],
+      unstaged: [7.6, 14.2]
+    },
+    IA: {
+      distant: [48.5, 6.0],
+      regional: [22.4, 31.0],
+      localized: [21.5, 57.7],
+      unstaged: [7.6, 14.2]
+    },
+    KS: {
+      distant: [48.5, 6.0],
+      regional: [22.4, 31.0],
+      localized: [21.5, 57.7],
+      unstaged: [7.6, 14.2]
+    },
+    KY: {
+      distant: [48.5, 6.0],
+      regional: [22.4, 31.0],
+      localized: [21.5, 57.7],
+      unstaged: [7.6, 14.2]
+    },
+    LA: {
+      distant: [48.5, 6.0],
+      regional: [22.4, 31.0],
+      localized: [21.5, 57.7],
+      unstaged: [7.6, 14.2]
+    },
+    ME: {
+      distant: [48.5, 6.0],
+      regional: [22.4, 31.0],
+      localized: [21.5, 57.7],
+      unstaged: [7.6, 14.2]
+    },
+    MD: {
+      distant: [48.5, 6.0],
+      regional: [22.4, 31.0],
+      localized: [21.5, 57.7],
+      unstaged: [7.6, 14.2]
+    },
+    MA: {
+      distant: [48.5, 6.0],
+      regional: [22.4, 31.0],
+      localized: [21.5, 57.7],
+      unstaged: [7.6, 14.2]
+    },
+    MI: {
+      distant: [48.5, 6.0],
+      regional: [22.4, 31.0],
+      localized: [21.5, 57.7],
+      unstaged: [7.6, 14.2]
+    },
+    MN: {
+      distant: [48.5, 6.0],
+      regional: [22.4, 31.0],
+      localized: [21.5, 57.7],
+      unstaged: [7.6, 14.2]
+    },
+    MS: {
+      distant: [48.5, 6.0],
+      regional: [22.4, 31.0],
+      localized: [21.5, 57.7],
+      unstaged: [7.6, 14.2]
+    },
+    MO: {
+      distant: [48.5, 6.0],
+      regional: [22.4, 31.0],
+      localized: [21.5, 57.7],
+      unstaged: [7.6, 14.2]
+    },
+    MT: {
+      distant: [48.5, 6.0],
+      regional: [22.4, 31.0],
+      localized: [21.5, 57.7],
+      unstaged: [7.6, 14.2]
+    },
+    NE: {
+      distant: [48.5, 6.0],
+      regional: [22.4, 31.0],
+      localized: [21.5, 57.7],
+      unstaged: [7.6, 14.2]
+    },
+    NV: {
+      distant: [48.5, 6.0],
+      regional: [22.4, 31.0],
+      localized: [21.5, 57.7],
+      unstaged: [7.6, 14.2]
+    },
+    NH: {
+      distant: [48.5, 6.0],
+      regional: [22.4, 31.0],
+      localized: [21.5, 57.7],
+      unstaged: [7.6, 14.2]
+    },
+    NJ: {
+      distant: [48.5, 6.0],
+      regional: [22.4, 31.0],
+      localized: [21.5, 57.7],
+      unstaged: [7.6, 14.2]
+    },
+    NM: {
+      distant: [48.5, 6.0],
+      regional: [22.4, 31.0],
+      localized: [21.5, 57.7],
+      unstaged: [7.6, 14.2]
+    },
+    NY: {
+      distant: [48.5, 6.0],
+      regional: [22.4, 31.0],
+      localized: [21.5, 57.7],
+      unstaged: [7.6, 14.2]
+    },
+    NC: {
+      distant: [48.5, 6.0],
+      regional: [22.4, 31.0],
+      localized: [21.5, 57.7],
+      unstaged: [7.6, 14.2]
+    },
+    ND: {
+      distant: [48.5, 6.0],
+      regional: [22.4, 31.0],
+      localized: [21.5, 57.7],
+      unstaged: [7.6, 14.2]
+    },
+    OH: {
+      distant: [48.5, 6.0],
+      regional: [22.4, 31.0],
+      localized: [21.5, 57.7],
+      unstaged: [7.6, 14.2]
+    },
+    OK: {
+      distant: [48.5, 6.0],
+      regional: [22.4, 31.0],
+      localized: [21.5, 57.7],
+      unstaged: [7.6, 14.2]
+    },
+    OR: {
+      distant: [48.5, 6.0],
+      regional: [22.4, 31.0],
+      localized: [21.5, 57.7],
+      unstaged: [7.6, 14.2]
+    },
+    PA: {
+      distant: [48.5, 6.0],
+      regional: [22.4, 31.0],
+      localized: [21.5, 57.7],
+      unstaged: [7.6, 14.2]
+    },
+    RI: {
+      distant: [48.5, 6.0],
+      regional: [22.4, 31.0],
+      localized: [21.5, 57.7],
+      unstaged: [7.6, 14.2]
+    },
+    SC: {
+      distant: [48.5, 6.0],
+      regional: [22.4, 31.0],
+      localized: [21.5, 57.7],
+      unstaged: [7.6, 14.2]
+    },
+    SD: {
+      distant: [48.5, 6.0],
+      regional: [22.4, 31.0],
+      localized: [21.5, 57.7],
+      unstaged: [7.6, 14.2]
+    },
+    TN: {
+      distant: [48.5, 6.0],
+      regional: [22.4, 31.0],
+      localized: [21.5, 57.7],
+      unstaged: [7.6, 14.2]
+    },
+    TX: {
+      distant: [48.5, 6.0],
+      regional: [22.4, 31.0],
+      localized: [21.5, 57.7],
+      unstaged: [7.6, 14.2]
+    },
+    UT: {
+      distant: [48.5, 6.0],
+      regional: [22.4, 31.0],
+      localized: [21.5, 57.7],
+      unstaged: [7.6, 14.2]
+    },
+    VT: {
+      distant: [48.5, 6.0],
+      regional: [22.4, 31.0],
+      localized: [21.5, 57.7],
+      unstaged: [7.6, 14.2]
+    },
+    VA: {
+      distant: [48.5, 6.0],
+      regional: [22.4, 31.0],
+      localized: [21.5, 57.7],
+      unstaged: [7.6, 14.2]
+    },
+    WA: {
+      distant: [48.5, 6.0],
+      regional: [22.4, 31.0],
+      localized: [21.5, 57.7],
+      unstaged: [7.6, 14.2]
+    },
+    WI: {
+      distant: [48.5, 6.0],
+      regional: [22.4, 31.0],
+      localized: [21.5, 57.7],
+      unstaged: [7.6, 14.2]
+    },
+    WV: {
+      distant: [48.5, 6.0],
+      regional: [22.4, 31.0],
+      localized: [21.5, 57.7],
+      unstaged: [7.6, 14.2]
+    },
+    DC: {
+      distant: [48.5, 6.0],
+      regional: [22.4, 31.0],
+      localized: [21.5, 57.7],
+      unstaged: [7.6, 14.2]
+    }
+  }
+
+
+  var chartDiagnosis = function() {
+    $("#chartDiagnosis").empty();
+    state = Cookies.get("state");
+    Highcharts.setOptions({
+      colors: ["#a3a9ac", "#ed1b2d", "#b2ecff", "#3a75c4"]
+    })
+    Highcharts.chart('chartDiagnosis', {
+      title: {
+        text: 'Stage at Diagnosis and 5-Year Survival Rate'
+      },
+      xAxis: {
+        categories: ['Stage at Diagnosis', '5-Year Survival'],
+        labels: {
+          style: {
+            "fontSize": "16px"
+          }
+        }
+      },
+      yAxis: [{
+        min: 0,
+        title: {
+          text: '(%)'
+        }
+      }],
+      legend: {
+        reversed: true
+      },
+      tooltip: {
+        valueSuffix: "%"
+      },
+      plotOptions: {
+        bar: {
+          stacking: 'normal',
+          dataLabels: {
+            enabled: true,
+            formatter: function() {
+              return this.y + "%";
+            }
+          }
+        }
+      },
+      series: [{
+        name: 'Unstaged tumors',
+        type: 'bar',
+        data: chartData[state]["unstaged"] || [100 - (chartData[state]["localized"][0] + chartData[state]["regional"][0] + chartData[state]["distant"][0]), 100 - (chartData[state]["localized"][1] + chartData[state]["regional"][1] +
+          chartData[state]["distant"][1])]
+      }, {
+        name: 'Distant (cancer has metastisized)',
+        type: 'bar',
+        data: chartData[state]["distant"]
+      }, {
+        name: 'Regional (spread to regional lymph nodes)',
+        type: 'bar',
+        data: chartData[state]["regional"]
+      }, {
+        name: 'Early (Localized - confined to primary site)',
+        type: 'bar',
+        data: chartData[state]["localized"]
+      }]
+    });
+
+    // Highcharts.chart('chartDiagnosis', {
+    //   title: {
+    //     text: 'Stage at Diagnosis and 5-Year Survival Rate (National data used for stage by survival as this state does not have these data available.)'
+    //   },
+    //   xAxis: {
+    //     categories: ['Stage at Diagnosis', '5-Year Relative Survival'],
+    //     labels : {
+    //       style: {
+    //         "fontSize": "16px"
+    //       }
+    //     }
+    //   },
+    //   yAxis: [
+    //     {
+    //     min: 0,
+    //     title: {
+    //       text: '(%)'
+    //       }
+    //     }
+    //   ],
+    //   legend: {
+    //     reversed: true
+    //   },
+    //   tooltip:{
+    //     valueSuffix: "%"
+    //   },
+    //   plotOptions: {
+    //     bar: {
+    //       stacking: 'normal',
+    //       dataLabels: {
+    //         enabled: true,
+    //         formatter: function(){
+    //           return this.y + "%";
+    //         }
+    //       }
+    //     },
+    //     spline: {
+    //       color: "#555559",
+    //       lineWidth: 1
+    //     }
+    //   },
+    //   series: [{
+    //     name: 'unstaged tumors not shown',
+    //     type: 'bar',
+    //     data: chartData[state]["unstaged"] || [ 100-(chartData[state]["localized"][0]+chartData[state]["regional"][0]+chartData[state]["distant"][0]), 100-(chartData[state]["localized"][1]+chartData[state]["regional"][1]+chartData[state]["distant"][1]) ]
+    //   }, {
+    //     name: 'Distant (cancer has metastisized)',
+    //     type: 'bar',
+    //     data: chartData[state]["distant"]
+    //   }, {
+    //     name: 'Regional (spread to regional lymph nodes)',
+    //     type: 'bar',
+    //     data: chartData[state]["regional"]
+    //   }, {
+    //     name: 'Localized (confined to primary site)',
+    //     type: 'bar',
+    //     data: chartData[state]["localized"]
+    //   },{
+    //     name: "Distant Line",
+    //     type: "spline",
+    //     data: [ chartData[state]["localized"][0]+chartData[state]["regional"][0]+chartData[state]["distant"][0], chartData[state]["localized"][1]+chartData[state]["regional"][1]+chartData[state]["distant"][1] ]
+    //   },{
+    //     name: "Regional Line",
+    //     type: "spline",
+    //     data: [ chartData[state]["localized"][0]+chartData[state]["regional"][0], chartData[state]["localized"][1]+chartData[state]["regional"][1] ]
+    //   },{
+    //     name: "Localized Line",
+    //     type: "spline",
+    //     data: [ chartData[state]["localized"][0], chartData[state]["localized"][1] ]
+    //   }]
+    // });
+  }
+
+  document.addEventListener("DOMContentLoaded", function() {
+    chartDiagnosis();
+  })
+</script>
