@@ -35,6 +35,12 @@
     font-family: 'Lato', sans-serif !important;
   }
 
+  .highcharts-axis-title{
+    font-family: "Lato", sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+  }
+
   @media (max-width: 700px) {
     #chartSmoking {
       /*height: 1000px;*/
@@ -176,66 +182,66 @@
         height: 450
       },
       title: {
-        text: "State Ranking by Smoking Rate and Tier"
+        text: "State Ranking by Smoking Rate"
       },
       xAxis: {
         labels: {
           enabled: false
         },
         plotBands: [{
-          from: 0,
+          from: -0.5,
           to: 1.5,
           color: "#e6ffb0",
           label: {
-            text: "<em>Top</em>",
+            text: "Top",
             style: {
               color: "#000000",
-              y: 30
-            }
+            },
+            y: 140
           }
         },{
           from: 1.5,
           to: 12.5,
           color: "#9cf6ff",
           label: {
-            text: "<em>Above Average</em>",
+            text: "Above<br/>Average",
             style: {
               color: "#000000",
-              y: 30
-            }
+            },
+            y: 100
           }
         },{
           from: 12.5,
-          to: 33.5,
+          to: 34.5,
           color: "#d7e6fa",
           label: {
-            text: "<em>Average</em>",
+            text: "Average",
             style: {
               color: "#000000",
-              y: 30
-            }
+            },
+            y: 80
           }
         },{
-          from: 33.5,
-          to: 44.5,
+          from: 34.5,
+          to: 45.5,
           color: "#cbd3d6",
           label: {
-            text: "<em>Below Average</em>",
+            text: "Below<br/>Average",
             style: {
               color: "#000000",
-              y: 30
-            }
+            },
+            y: 50
           }
         },{
-          from: 44.5,
-          to: 50.5,
+          from: 45.5,
+          to: 51.5,
           color: "#ffd6da",
           label: {
-            text: "<em>Bottom</em>",
+            text: "Bottom",
             style: {
               color: "#000000",
-              y: 30
-            }
+            },
+            y: 30
           }
         }
       ],
@@ -297,7 +303,7 @@
       yAxis: {
         min: 0,
         title: {
-          text: "Age-Adjusted Lung Cancer Incidence Rate per 100,000"
+          text: "Percent of Adults Who Are Current Smokers"
         }
       },
       legend: {
@@ -378,6 +384,10 @@
       tooltip: {
         formatter: function() {
           return '<b>' + this.x + '</b>: ' + Highcharts.numberFormat(this.y, 1);
+        },
+        style: {
+          "fontSize": "16px",
+          "fontFamily": "'Lato', sans-serif"
         }
       }
 

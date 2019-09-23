@@ -23,6 +23,12 @@
     font-family: 'Lato', sans-serif !important;
   }
 
+  .highcharts-axis-title{
+    font-family: "Lato", sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+  }
+
   .highcharts-legend {
     font-family: 'Lato', sans-serif !important;
   }
@@ -167,14 +173,22 @@
       tooltip: {
         formatter: function() {
           return '<b>' + this.x + '</b>: ' + Highcharts.numberFormat(this.y, 1);
+        },
+        style: {
+          "fontSize": "16px",
+          "fontFamily": "'Lato', sans-serif"
         }
       },
       xAxis: {
         labels: {
           enabled: false
         },
+        style: {
+          "fontSize": "16px",
+          "fontFamily": "'Lato', sans-serif"
+        },
         plotBands: [{
-            from: 0,
+            from: -0.5,
             to: 6.5,
             color: "#e6ffb0",
             label: {
@@ -190,11 +204,11 @@
             to: 13.5,
             color: "#9cf6ff",
             label: {
-              text: "Above Average",
+              text: "Above<br/>Average",
               style: {
                 color: "#000000"
               },
-              y: 10
+              y: 30
             }
           },
           {
@@ -206,7 +220,7 @@
               style: {
                 color: "#000000"
               },
-              y: 10
+              y: 60
             }
           },
           {
@@ -214,11 +228,11 @@
             to: 35.5,
             color: "#cbd3d6",
             label: {
-              text: "Below Average",
+              text: "Below<br/>Average",
               style: {
                 color: "#000000"
               },
-              y: 10
+              y: 80
             }
           }, {
             from: 35.5,
@@ -229,7 +243,7 @@
               style: {
                 color: "#000000"
               },
-              y: 10
+              y: 110
             }
           }
         ],
@@ -286,7 +300,15 @@
       yAxis: {
         min: 0,
         title: {
-          text: "5 year survival rate"
+          text: "5 year survival rate",
+          style: {
+
+          }
+        },
+        labels: {
+          style: {
+            "fontSize": "16px"
+          }
         }
       },
       legend: {

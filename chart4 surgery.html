@@ -35,6 +35,12 @@
     font-family: 'Lato', sans-serif !important;
   }
 
+  .highcharts-axis-title{
+    font-family: "Lato", sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+  }
+
   @media (max-width: 700px) {
     #chartSurgery {
       /*height: 1000px;*/
@@ -175,6 +181,10 @@
       tooltip: {
         formatter: function(){
           return '<b>' + this.x + '</b>: ' + Highcharts.numberFormat(this.y, 1);
+        },
+        style: {
+          "fontSize": "16px",
+          "fontFamily": "'Lato', sans-serif"
         }
       },
       legend: {
@@ -185,7 +195,7 @@
           enabled: false
         },
         plotBands: [{
-            from: 0,
+            from: -0.5,
             to: 2.5,
             color: "#e6ffb0",
             label: {
@@ -201,11 +211,11 @@
             to: 8.5,
             color: "#9cf6ff",
             label: {
-              text: "Above Average",
+              text: "Above<br/>Average",
               style: {
                 color: "#000000"
               },
-              y: 10
+              y: 30
             }
           },
           {
@@ -217,7 +227,7 @@
               style: {
                 color: "#000000"
               },
-              y: 10
+              y: 60
             }
           },
           {
@@ -225,11 +235,11 @@
             to: 41.5,
             color: "#cbd3d6",
             label: {
-              text: "Below Average",
+              text: "Below<br/>Average",
               style: {
                 color: "#000000"
               },
-              y: 10
+              y: 80
             }
           }, {
             from: 41.5,
@@ -240,7 +250,7 @@
               style: {
                 color: "#000000"
               },
-              y: 10
+              y: 110
             }
           }
         ],

@@ -22,6 +22,11 @@
   .highcharts-title {
     font-family: 'Lato', sans-serif !important;
   }
+  .highcharts-axis-title{
+    font-family: "Lato", sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+  }
 
   .highcharts-legend {
     font-family: 'Lato', sans-serif !important;
@@ -183,59 +188,59 @@
           enabled: false
         },
         plotBands: [{
-          from: 0,
+          from: -0.5,
           to: 1.5,
           color: "#e6ffb0",
           label: {
-            text: "<em>Top</em>",
+            text: "Top",
             style: {
               color: "#000000",
-              y: 30
-            }
+            },
+            y: 140
           }
         },{
           from: 1.5,
           to: 8.5,
           color: "#9cf6ff",
           label: {
-            text: "<em>Above Average</em>",
+            text: "Above<br>Average",
             style: {
               color: "#000000",
-              y: 30
-            }
+            },
+            y: 90
           }
         },{
           from: 8.5,
           to: 36.5,
           color: "#d7e6fa",
           label: {
-            text: "<em>Average</em>",
+            text: "Average",
             style: {
               color: "#000000",
-              y: 30
-            }
+            },
+            y: 60
           }
         },{
           from: 36.5,
           to: 49.5,
           color: "#cbd3d6",
           label: {
-            text: "<em>Below Average</em>",
+            text: "Below<br>Average",
             style: {
               color: "#000000",
-              y: 30
-            }
+            },
+            y: 30
           }
         },{
           from: 49.5,
           to: 52,
           color: "#ffd6da",
           label: {
-            text: "<em>Bottom</em>",
+            text: "Bottom",
             style: {
               color: "#000000",
-              y: 30
-            }
+            },
+            y: 10
           }
         }
       ],
@@ -377,6 +382,10 @@
       tooltip: {
         formatter: function() {
           return '<b>' + this.x + '</b>: ' + Highcharts.numberFormat(this.y, 1);
+        },
+        style: {
+          "fontSize": "16px",
+          "fontFamily": "'Lato', sans-serif"
         }
       }
 
