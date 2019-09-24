@@ -98,20 +98,20 @@ font-weight: 600;
 
     tooltip: {
       headerFormat: '',
-      pointFormat: '<b>{point.name}</b>: <b>{point.coverage}</b>'
+      pointFormat: '<b>{point.name}</b>: <b>{point.description}</b>'
     },
 
     plotOptions: {
-      series: {
-        dataLabels: {
-          enabled: true,
-          format: '{point.hc-a2}',
-          color: '#000000',
-          style: {
-            textOutline: false
-          }
+        series: {
+            dataLabels: {
+                enabled: true,
+                format: '{point.hc-a2}',
+                color: '#000000',
+                style: {
+                    textOutline: false
+                }
+            }
         }
-      }
     },
 
     series: [{
@@ -330,9 +330,8 @@ font-weight: 600;
         region: 'West',
         x: 2,
         y: 2,
-        value: 10,
-        description: "No FFS Program"
-        23579
+        value: 40,
+        description: "Covered"
       }, {
         'hc-a2': 'NE',
         name: 'Nebraska',
