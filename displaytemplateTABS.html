@@ -1,0 +1,568 @@
+<style>
+.featherlight, .featherlight:last-of-type {background: rgba(0, 0, 0, 0.8);}
+
+.tab > .tab-content h2 {font-size: 36px; line-height: 1.25em;}
+
+.tab > .tab-content h3 {line-height: 1.25em; color: #555559; margin-bottom: 5px;}
+
+#changeState {margin-top: -8px; float: right;}
+
+#changeState a {font-size: 14px; font-weight: 700; line-height: 40px; color: #2dc6d6; background: #ffffff; height: 40px; padding: 0 20px; display: inline-block; border-radius: 25px; -webkit-border-radius: 25px; -moz-border-radius: 25px; -ms-border-radius: 25px; -o-border-radius: 25px; cursor: pointer;}
+
+#changeState a:hover {text-decoration: none; color: #ffffff; background: #555559;}
+
+.backToTop {margin: 10px 25px 40px; padding: 0 0 40px; border-bottom: 2px solid #d7d8d9;}
+
+.backToTop article {font-size: 13px; font-weight: 700; text-transform: uppercase; color: #2dc6d6; display: inline-block; cursor: pointer;}
+
+.backToTop article:hover {color: #555559;}
+
+.summary .content-block:last-child .backToTop {margin: 10px 25px 0; padding: 0; border-bottom: 0 none;}
+
+@media (max-width: 960px) {
+	#changeState {margin-top: 10px; float: none;}
+}
+
+@media (max-width: 768px) {
+	#socialnav #socialbuttons {margin-left: 15px !important; margin-bottom: 0 !important;}
+	#changeState {margin-top: -8px; float: right;}
+	#tabs-container.mobile {margin-top: 20px !important;}
+}
+
+@media (max-width: 640px) {
+	#changeState {margin-top: 10px; float: none;}
+}
+
+@media (max-width: 567px) {
+	.backToTop {margin: 0 15px 20px; padding: 0 0 20px; border-bottom: 1px solid #d7d8d9;}
+	.summary .content-block:last-child .backToTop {margin: 0 15px;}
+	.backToTop article {font-size: 12px;}
+}
+
+@media (max-width: 414px) {
+	#socialnav #socialnav_int {text-align: left; float: none;}
+	#socialnav #socialbuttons {width: initial; margin-left: 0 !important; margin-right: 0; margin-bottom: 11px; padding-right: 0; display: inline-block; border-right: 0 none; float: none;}
+	#socialnav #socialbuttons li.label {text-align: left; width: auto; margin-bottom: 0; transform: inherit;}
+	#print-email {text-align: left; margin-top: 24px; margin-bottom: 0; margin-left: 0; display: inline-block; float: right;}
+}
+
+@media (max-width: 400px) {
+	#socialnav #socialbuttons li.label {float: left;}
+	#print-email {margin-top: 8px; margin-right: -4px !important;}
+	#changeState {margin-top: 12px; float: none;}
+}
+
+
+/*------------------------------
+LEFT NAV
+--------------------------------*/
+ul#subnav {background: none; background-color: transparent !important; height: auto; list-style: none; perspective: 900px; -webkit-perspective: 900px; padding: 0; margin: 0;}
+
+ul#subnav li {position: relative; padding: 5px 0; margin: 0; border-bottom: 1px solid #dcdcdc;}
+
+ul#subnav li.subMenu, ul#subnav li.active, ul#subnav li.parentOfActive {position: relative; padding: 5px 0; margin: 0;}
+
+ul#subnav li input[type=checkbox] {display: none;}
+
+ul#subnav li:last-of-type {padding-bottom: 0; border-bottom: 0 none;}
+
+ul#subnav li.subMenu i, ul#subnav li.subMenu.active i, ul#subnav li.subMenu.parentOfActive i {position: absolute; transform: translate(-6px, 0); -webkit-transform: translate(-6px, 0); -moz-transform: translate(-6px, 0); margin-top: 11px; right: 0;}
+
+ul#subnav li.subMenu i:before, ul#subnav li.subMenu i:after, ul#subnav li.subMenu.active i:before, ul#subnav li.subMenu.active i:after, ul#subnav li.subMenu.parentOfActive i:before, ul#subnav li.subMenu.parentOfActive i:after {content: ""; position: absolute; background-color: #3a75c4; width: 3px; height: 9px;}
+
+ul#subnav li.subMenu i:before, ul#subnav li.subMenu.active i:before {transform: translate(-2px, 0) rotate(45deg); -webkit-transform: translate(-2px, 0) rotate(45deg); -moz-transform: translate(-2px, 0) rotate(45deg);}
+
+ul#subnav li.subMenu i:after, ul#subnav li.subMenu.active i:after {transform: translate(2px, 0) rotate(-45deg); -webkit-transform: translate(2px, 0) rotate(-45deg); -moz-transform: translate(2px, 0) rotate(-45deg);}
+
+ul#subnav li.subMenu input[type=checkbox], ul#subnav li.submenu.active input[type=checkbox], ul#subnav li.submenu.parentOfActive input[type=checkbox] {position: absolute; cursor: pointer; width: 100%; height: 100%; margin: 0; display: inherit; z-index: 0; opacity: 0;}
+
+ul#subnav li.subMenu input[type=checkbox]:checked ~ p, ul#subnav li.subMenu input[type=checkbox]:checked ~ ul, ul#subnav li.active input[type=checkbox]:checked ~ p, ul#subnav li.active input[type=checkbox]:checked ~ ul, ul#subnav li.parentOfActive input[type=checkbox]:checked ~ p, ul#subnav li.parentOfActive input[type=checkbox]:checked ~ ul {margin-top: 0; max-height: 0; opacity: 0; transform: translate(0, 50%); -webkit-transform: translate(0, 50%); -moz-transform: translate(0, 50%);}
+
+ul#subnav li.subMenu input[type=checkbox]:checked ~ i:before, ul#subnav li.submenu.active ~ i:before, ul#subnav li.parentOfActive input[type=checkbox]:checked ~ i:before {transform: translate(2px, 0) rotate(45deg); -webkit-transform: translate(2px, 0) rotate(45deg); -moz-transform: translate(2px, 0) rotate(45deg);}
+
+ul#subnav li.subMenu input[type=checkbox]:checked ~ i:after, ul#subnav li.submenu.active input[type=checkbox] ~ i:after, ul#subnav li.parentOfActive input[type=checkbox]:checked ~ i:after {transform: translate(-2px, 0) rotate(-45deg); -webkit-transform: translate(-2px, 0) rotate(-45deg); -moz-transform: translate(-2px, 0) rotate(-45deg);}
+
+#subnav li .submenu {margin-top: -5px; padding-left: 0; display: block; border-top: 0 none;}
+
+ul#subnav .submenu {margin-bottom: 0;}
+
+ul#subnav li .submenu li {text-indent: 0; position: relative; margin: 0; padding: 0 0 5px 10px; border-bottom: 0 none;}
+
+ul#subnav li .submenu li:before {content: "\2022 "; color: #a3a9ac; margin-left: -10px; margin-right: 3px; font-size: .85em;}
+
+ul#subnav li .submenu li.first {padding: 10px 0 5px 10px;}
+
+ul#subnav li .submenu li i {display: none;}
+
+#subnav li.active > a, #subnav li.subMenu.parentOfActive > a {font-weight: 700; color: #3a75c4;}
+
+#subnav li.active .submenu li.active > a, #subnav li.parentOfActive .submenu li.active > a {font-weight: 700; color: #3a75c4; cursor: default; pointer-events: none;}
+
+#subnav li.subMenu .submenu li.active.parentOfActive.inSameFolder > a {font-weight: 700; color: #555559;}
+
+ul#subnav li .submenu li .submenu li:before {content: "\2013 "; color: #a3a9ac; margin-left: -10px; margin-right: 3px; font-size: .85em;}
+
+
+/*------------------------------
+TABS
+--------------------------------*/
+#tabs-container {margin-top: 40px; margin-left: 25px; display: block;}
+
+#tabs-container input[type="radio"] {display: none;}
+
+#tabs-container label {font-size: 16px; font-weight: 900; color: #ffffff; text-align: center; line-height: 18px; background: #2dc6d6; vertical-align: middle; height: 60px; margin: 0 2px 0 0; padding: 0 25px; display: inline-table; border: 0px solid #a3a9ac; border-bottom: 0 none; border-radius: 12px 12px 0 0;}
+
+#tabs-container label.last {margin: 0;}
+
+#tabs-container label:hover {color: #ffffff; text-decoration: none; background: #555559; cursor: pointer;}
+
+#tabs-container label span {vertical-align: middle; display: table-cell;}
+
+#tabs-container input:checked + label {font-weight: 900; color: #a3a9ac; background: #ffffff; margin: 0 2px -1px 0; padding: 1px 25px 0; border: 1px solid #2dc6d6; border-bottom: 0 none;}
+
+#tabs-container input:checked + label:hover {color: #a3a9ac; text-decoration: none; background: #ffffff; cursor: default;}
+
+.tab {margin: 0; padding: 35px 5px; border: 1px solid #2dc6d6; border-radius: 0; clear: both;}
+
+.tab > .tab-content {display: none;}
+
+#show-tab-1, #hide-tab-1:target, #show-tab-2, #hide-tab-2:target, #show-tab-3, #hide-tab-3:target, #show-tab-4, #hide-tab-4:target, #show-tab-5, #hide-tab-5:target {display: none; position: relative;}
+
+#hide-tab-1, #hide-tab-2, #hide-tab-3, #hide-tab-4, #hide-tab-5 {position: absolute; left: -99999px;}
+
+@media (min-width: 1281px) {
+	#tab1:checked ~ .tab #tab-1, #tab2:checked ~ .tab #tab-2, #tab3:checked ~ .tab #tab-3, #tab4:checked ~ .tab #tab-4, #tab5:checked ~ .tab #tab-5 {display: block;}
+}
+
+@media (max-width: 1280px) {
+	#tabs-container {margin-top: 40px; display: block;}
+	#tabs-container label {display: none;}
+	#hide-tab-1, #hide-tab-2, #hide-tab-3, #hide-tab-4, #hide-tab-5 {position: inherit; left: auto;}
+	#show-tab-1.show, #show-tab-2.show, #show-tab-3.show, #show-tab-4.show, #show-tab-5.show {color: #ffffff; background-color: #555559; display: block;}
+	#tab1 ~ .tab #tab-1, #tab2 ~ .tab #tab-2, #tab3 ~ .tab #tab-3, #tab4 ~ .tab #tab-4, #tab5 ~ .tab #tab-5 {display: block;}
+	#tabs-container .tab {padding: 0; border: 0 none;}
+	#tabs-container .tab .tab-content {margin-bottom: 15px; padding: 0; display: block; border: 1px solid #2dc6d6;}
+	#mobile-tab-1, #mobile-tab-2, #mobile-tab-3, #mobile-tab-4, #mobile-tab-5 {display: none; position: relative;}
+	#mobile-tab-1.show, #mobile-tab-2.show, #mobile-tab-3.show, #mobile-tab-4.show, #mobile-tab-5.show {display: block;}
+	#tabs-container .tab #hide-tab-1.hide, #tabs-container .tab #hide-tab-2.hide, #tabs-container .tab #hide-tab-3.hide, #tabs-container .tab #hide-tab-4.hide, #tabs-container .tab #hide-tab-5.hide {display: none;}
+
+	#tabs-container .tab #show-tab-1, #tabs-container .tab #hide-tab-1, #tabs-container .tab #show-tab-2, #tabs-container .tab #hide-tab-2, #tabs-container .tab #show-tab-3, #tabs-container .tab #hide-tab-3, #tabs-container .tab #show-tab-4, #tabs-container .tab #hide-tab-4, #tabs-container .tab #show-tab-5, #tabs-container .tab #hide-tab-5 {font-size: 16px; font-weight: 700; line-height: 1.25em; padding: 15px 45px 15px 15px;}
+	#tabs-container .tab #hide-tab-1, #tabs-container .tab #hide-tab-2, #tabs-container .tab #hide-tab-3, #tabs-container .tab #hide-tab-4, #tabs-container .tab #hide-tab-5 {color: #2dc6d6; display: block;}
+	#tabs-container .tab #show-tab-1, #tabs-container .tab #show-tab-2, #tabs-container .tab #show-tab-3, #tabs-container .tab #show-tab-4, #tabs-container .tab #show-tab-5 {color: #ffffff;}
+	#tabs-container .tab #show-tab-1:hover, #tabs-container .tab #hide-tab-1:hover, #tabs-container .tab #show-tab-2:hover, #tabs-container .tab #hide-tab-2:hover, #tabs-container .tab #show-tab-3:hover, #tabs-container .tab #hide-tab-3:hover, #tabs-container .tab #show-tab-4:hover, #tabs-container .tab #hide-tab-4:hover, #tabs-container .tab #show-tab-5:hover, #tabs-container .tab #hide-tab-5:hover {text-decoration: none;}
+
+
+	#tabs-container .tab #show-tab-1, #tabs-container .tab #show-tab-2, #tabs-container .tab #show-tab-3, #tabs-container .tab #show-tab-4, #tabs-container .tab #show-tab-5 {padding-bottom: 15px;}
+	#tabs-container .tab #show-tab-1:before, #tabs-container .tab #show-tab-2:before, #tabs-container .tab #show-tab-3:before, #tabs-container .tab #show-tab-4:before, #tabs-container .tab #show-tab-5:before {font-family: FontAwesome; font-size: 14px; font-style: normal; font-weight: normal; color: #ffffff; text-decoration: inherit; padding-left: 15px; float: right; margin-right: -30px; content: "\f077";}
+	#tabs-container .tab #hide-tab-1:before, #tabs-container .tab #hide-tab-2:before, #tabs-container .tab #hide-tab-3:before, #tabs-container .tab #hide-tab-4:before, #tabs-container .tab #hide-tab-5:before {font-family: FontAwesome; font-size: 14px; font-style: normal; font-weight: normal; color: #2dc6d6; text-decoration: inherit; padding-left: 15px; float: right; margin-right: -30px; content: "\f078";}
+	#hide-tab-1:target + #show-tab-1, #hide-tab-1:target ~ #mobile-tab-1, #hide-tab-2:target + #show-tab-2, #hide-tab-2:target ~ #mobile-tab-2, #hide-tab-3:target + #show-tab-3, #hide-tab-3:target ~ #mobile-tab-3, #hide-tab-4:target + #show-tab-4, #hide-tab-4:target ~ #mobile-tab-4, #hide-tab-5:target + #show-tab-5, #hide-tab-5:target ~ #mobile-tab-5 {display: block;}
+	#mobile-tab-1, #mobile-tab-2, #mobile-tab-3, #mobile-tab-4, #mobile-tab-5 {margin-left: -15px; margin-right: -45px;}
+	#mobile-tab-1 .grade-summary, #mobile-tab-2 .grade-summary, #mobile-tab-3 .grade-summary, #mobile-tab-4 .grade-summary, #mobile-tab-5 .grade-summary {margin-bottom: -15px; padding: 0 45px 15px 15px;}
+	#mobile-tab-1 .grade-summary h2:nth-child(1), #mobile-tab-2 .grade-summary h2:nth-child(1), #mobile-tab-3 .grade-summary h2:nth-child(1), #mobile-tab-4 .grade-summary h2:nth-child(1), #mobile-tab-5 .grade-summary h2:nth-child(1) {display: none;}
+	.summary {padding: 40px; border-top: 1px solid #2dc6d6;}
+}
+
+@media (max-width: 1136px) {
+	.letter-grade {width: 89%; width: -webkit-calc(100% - 80px); width: -moz-calc(100% - 80px); width: -ms-calc(100% - 80px); width: -o-calc(100% - 80px); width: calc(100% - 80px); padding: 40px 40px 0; display: inline-table;}
+	.summary {padding: 0 40px 40px;}
+}
+
+@media (max-width: 768px) {
+	.letter-grade {width: 200px; padding: 40px 0 0 40px; display: table-cell;}
+	.summary {padding: 40px;}
+
+}
+
+@media (max-width: 680px) {
+	.letter-grade {width: 89%; width: -webkit-calc(100% - 80px); width: -moz-calc(100% - 80px); width: -ms-calc(100% - 80px); width: -o-calc(100% - 80px); width: calc(100% - 80px); padding: 40px 40px 0; display: inline-table;}
+	.summary {padding: 0 40px 40px;}
+}
+
+@media (max-width: 567px) {
+	#tabs-container {margin-top: 20px; margin-left: 0; margin-right: 0;}
+	.mobile-box #show-tab-1, .mobile-box #hide-tab-1 {font-size: 16px; line-height: 21px;}
+	.mobile-box #show-tab-1:before {font-size: 16px;}
+	.mobile-box #hide-tab-1:before {font-size: 16px;}
+	.mobile-box #show-tab-2, .mobile-box #hide-tab-2 {font-size: 16px; line-height: 21px;}
+	.mobile-box #show-tab-2:before {font-size: 16px;}
+	.mobile-box #hide-tab-2:before {font-size: 16px;}
+	.mobile-box #show-tab-3, .mobile-box #hide-tab-3 {font-size: 16px; line-height: 21px;}
+	.mobile-box #show-tab-3:before {font-size: 16px;}
+	.mobile-box #hide-tab-3:before {font-size: 16px;}
+	.mobile-box #show-tab-4, .mobile-box #hide-tab-4 {font-size: 16px; line-height: 21px;}
+	.mobile-box #show-tab-4:before {font-size: 16px;}
+	.mobile-box #hide-tab-4:before {font-size: 16px;}
+	.mobile-box #show-tab-5, .mobile-box #hide-tab-5 {font-size: 16px; line-height: 21px;}
+	.mobile-box #show-tab-5:before {font-size: 16px;}
+	.mobile-box #hide-tab-5:before {font-size: 16px;}
+	.letter-grade {width: 89%; width: -webkit-calc(100% - 40px); width: -moz-calc(100% - 40px); width: -ms-calc(100% - 40px); width: -o-calc(100% - 40px); width: calc(100% - 40px); padding: 20px 20px 0; display: inline-table;}
+	.summary {padding: 15px 0 20px;}
+}
+</style>
+
+	<h1 class="internalPageTitle turquoise"><t:if test="headline != null">${headline}</t:if><t:else>${title}</t:else><div id="changeState"><a id="viewDiff" onclick="document.getElementById('location').click()">View a different state</a></div></h1>
+
+	<t:if test="state_intro != null">
+	<span class="intro">${state_intro}</span>
+	</t:if>
+
+	<!-- TABS -->
+	<div id="tabs-container">
+		<input id="tab1" type="radio" name="tabs" checked>
+		<label for="tab1"><span>Lung Cancer Treatment</span></label>
+		<input id="tab2" type="radio" name="tabs">
+		<label for="tab2"><span>Screening and Prevention</span></label>
+		<input id="tab3" type="radio" name="tabs">
+		<label for="tab3"><span>Summary</span></label>
+		<input id="tab4" type="radio" name="tabs">
+		<label for="tab4"><span>Tab 4 Label</span></label>
+		<input id="tab5" type="radio" name="tabs">
+		<label for="tab5" class="last"><span>Tab 5 Label</span></label>
+
+		<!-- PANES -->
+		<div class="tab">
+
+			<!-- Lung Cancer Treatment -->
+			<div id="tab-1" class="tab-content">
+				<a href="javascript:void(0)" id="hide-tab-1">Lung Cancer Treatment</a>
+				<a href="javascript:void(0)" id="show-tab-1">Lung Cancer Treatment</a>
+				<div id="mobile-tab-1">
+					<div class="grade-summary">
+						<div class="summary">
+							<h2>Lung Cancer Treatment</h2>
+							<t:if test="incidence_intro != null">
+							<span class="content-block">
+								${incidence_intro}
+                <div id="item-928217472" class="templateComponent" style="display: inline;"></div>
+
+								<t:if test="incidence_chart != null">
+								${incidence_chart}
+								</t:if>
+								<div class="backToTop" onclick="var pos = $(window).scrollTop(); $('html, body').animate({ scrollTop: pos - pos}, 200);">
+									<article class=""><i class="fa fa-arrow-circle-up" aria-hidden="true"></i> back to top</article>
+								</div>
+							</span>
+							</t:if>
+							<t:if test="survival_intro != null">
+							<span class="content-block">
+								${survival_intro}
+
+                <div id="item-928505770" class="templateComponent" style="display: inline;"></div>
+
+								<t:if test="survival_chart != null">
+								${survival_chart}
+								</t:if>
+								<div class="backToTop" onclick="var pos = $(window).scrollTop(); $('html, body').animate({ scrollTop: pos - pos}, 200);">
+									<article class=""><i class="fa fa-arrow-circle-up" aria-hidden="true"></i> back to top</article>
+								</div>
+							</span>
+							</t:if>
+							<t:if test="stage_intro != null">
+							<span class="content-block">
+								${stage_intro}
+								<t:if test="stage_chart != null">
+								${stage_chart}
+								</t:if>
+								<div class="backToTop" onclick="var pos = $(window).scrollTop(); $('html, body').animate({ scrollTop: pos - pos}, 200);">
+									<article class=""><i class="fa fa-arrow-circle-up" aria-hidden="true"></i> back to top</article>
+								</div>
+							</span>
+							</t:if>
+							<t:if test="treatment_intro != null">
+							<span class="content-block">
+								${treatment_intro}
+								<t:if test="treatment_chart != null">
+								${treatment_chart}
+								</t:if>
+								<div class="backToTop" onclick="var pos = $(window).scrollTop(); $('html, body').animate({ scrollTop: pos - pos}, 200);">
+									<article class=""><i class="fa fa-arrow-circle-up" aria-hidden="true"></i> back to top</article>
+								</div>
+							</span>
+							</t:if>
+							<t:if test="lack_intro != null">
+							<span class="content-block">
+								${lack_intro}
+								<t:if test="lack_chart != null">
+								${lack_chart}
+								</t:if>
+								<div class="backToTop" onclick="var pos = $(window).scrollTop(); $('html, body').animate({ scrollTop: pos - pos}, 200);">
+									<article class=""><i class="fa fa-arrow-circle-up" aria-hidden="true"></i> back to top</article>
+								</div>
+							</span>
+							</t:if>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- Screening and Prevention -->
+			<div id="tab-2" class="tab-content">
+				<a href="javascript:void(0)" id="hide-tab-2">Screening and Prevention</a>
+				<a href="javascript:void(0)" id="show-tab-2">Screening and Prevention</a>
+				<div id="mobile-tab-2">
+					<div class="grade-summary">
+						<div class="summary">
+							<h2>Screening and Prevention</h2>
+							<t:if test="prevention_text_1 != null">
+							<span class="content-block">
+								${prevention_text_1}
+								<t:if test="prevention_chart_1 != null">
+								${prevention_chart_1}
+								</t:if>
+								<div class="backToTop" onclick="var pos = $(window).scrollTop(); $('html, body').animate({ scrollTop: pos - pos}, 200);">
+									<article class=""><i class="fa fa-arrow-circle-up" aria-hidden="true"></i> Back to Top</article>
+								</div>
+							</span>
+							</t:if>
+							<t:if test="prevention_text_2 != null">
+							<span class="content-block">
+								${prevention_text_2}
+								<t:if test="prevention_chart_2 != null">
+								${prevention_chart_2}
+								</t:if>
+								<div class="backToTop" onclick="var pos = $(window).scrollTop(); $('html, body').animate({ scrollTop: pos - pos}, 200);">
+									<article class=""><i class="fa fa-arrow-circle-up" aria-hidden="true"></i> Back to Top</article>
+								</div>
+							</span>
+							</t:if>
+							<t:if test="prevention_text_3 != null">
+							<span class="content-block">
+								${prevention_text_3}
+								<t:if test="prevention_chart_3 != null">
+								${prevention_chart_3}
+								</t:if>
+								<div class="backToTop" onclick="var pos = $(window).scrollTop(); $('html, body').animate({ scrollTop: pos - pos}, 200);">
+									<article class=""><i class="fa fa-arrow-circle-up" aria-hidden="true"></i> Back to Top</article>
+								</div>
+							</span>
+							</t:if>
+							<t:if test="prevention_text_4 != null">
+							<span class="content-block">
+								${prevention_text_4}
+								<t:if test="prevention_chart_4 != null">
+								${prevention_chart_4}
+								</t:if>
+								<div class="backToTop" onclick="var pos = $(window).scrollTop(); $('html, body').animate({ scrollTop: pos - pos}, 200);">
+									<article class=""><i class="fa fa-arrow-circle-up" aria-hidden="true"></i> Back to Top</article>
+								</div>
+							</span>
+							</t:if>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- Summary -->
+			<div id="tab-3" class="tab-content">
+				<a href="javascript:void(0)" id="hide-tab-3">Summary</a>
+				<a href="javascript:void(0)" id="show-tab-3">Summary</a>
+				<div id="mobile-tab-3">
+					<div class="grade-summary">
+						<div class="summary">
+							<h2>Summary</h2>
+							<t:if test="summary != null">
+							<span class="content-block">
+								${summary}
+								<div class="backToTop" onclick="var pos = $(window).scrollTop(); $('html, body').animate({ scrollTop: pos - pos}, 200);">
+									<article class=""><i class="fa fa-arrow-circle-up" aria-hidden="true"></i> Back to Top</article>
+								</div>
+							</span>
+							</t:if>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- Tab 4 -->
+			<div id="tab-4" class="tab-content">
+				<a href="javascript:void(0)" id="hide-tab-4">Tab 4</a>
+				<a href="javascript:void(0)" id="show-tab-4">Tab 4</a>
+				<div id="mobile-tab-4">
+					<div class="grade-summary">
+						<div class="summary">
+							<h2>Tab 4</h2>
+							<t:if test="incidence_intro != null">
+							<span class="content-block">
+								${incidence_intro}
+								<t:if test="incidence_chart != null">
+								${incidence_chart}
+								</t:if>
+								<div class="backToTop" onclick="var pos = $(window).scrollTop(); $('html, body').animate({ scrollTop: pos - pos}, 200);">
+									<article class=""><i class="fa fa-arrow-circle-up" aria-hidden="true"></i> Back to Top</article>
+								</div>
+							</span>
+							</t:if>
+							<t:if test="survival_intro != null">
+							<span class="content-block">
+								${survival_intro}
+								<t:if test="survival_chart != null">
+								${survival_chart}
+								</t:if>
+								<div class="backToTop" onclick="var pos = $(window).scrollTop(); $('html, body').animate({ scrollTop: pos - pos}, 200);">
+									<article class=""><i class="fa fa-arrow-circle-up" aria-hidden="true"></i> Back to Top</article>
+								</div>
+							</span>
+							</t:if>
+							<t:if test="stage_intro != null">
+							<span class="content-block">
+								${stage_intro}
+								<t:if test="stage_chart != null">
+								${stage_chart}
+								</t:if>
+								<div class="backToTop" onclick="var pos = $(window).scrollTop(); $('html, body').animate({ scrollTop: pos - pos}, 200);">
+									<article class=""><i class="fa fa-arrow-circle-up" aria-hidden="true"></i> Back to Top</article>
+								</div>
+							</span>
+							</t:if>
+							<t:if test="treatment_intro != null">
+							<span class="content-block">
+								${treatment_intro}
+								<t:if test="treatment_chart != null">
+								${treatment_chart}
+								</t:if>
+								<div class="backToTop" onclick="var pos = $(window).scrollTop(); $('html, body').animate({ scrollTop: pos - pos}, 200);">
+									<article class=""><i class="fa fa-arrow-circle-up" aria-hidden="true"></i> Back to Top</article>
+								</div>
+							</span>
+							</t:if>
+							<t:if test="lack_intro != null">
+							<span class="content-block">
+								${lack_intro}
+								<t:if test="lack_chart != null">
+								${lack_chart}
+								</t:if>
+								<div class="backToTop" onclick="var pos = $(window).scrollTop(); $('html, body').animate({ scrollTop: pos - pos}, 200);">
+									<article class=""><i class="fa fa-arrow-circle-up" aria-hidden="true"></i> Back to Top</article>
+								</div>
+							</span>
+							</t:if>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- Tab 5 -->
+			<div id="tab-5" class="tab-content">
+				<a href="javascript:void(0)" id="hide-tab-5">Tab 5</a>
+				<a href="javascript:void(0)" id="show-tab-4">Tab 5</a>
+				<div id="mobile-tab-5">
+					<div class="grade-summary">
+						<div class="summary">
+							<h2>Tab 5</h2>
+							<t:if test="incidence_intro != null">
+							<span class="content-block">
+								${incidence_intro}
+								<t:if test="incidence_chart != null">
+								${incidence_chart}
+								</t:if>
+								<div class="backToTop" onclick="var pos = $(window).scrollTop(); $('html, body').animate({ scrollTop: pos - pos}, 200);">
+									<article class=""><i class="fa fa-arrow-circle-up" aria-hidden="true"></i> Back to Top</article>
+								</div>
+							</span>
+							</t:if>
+							<t:if test="survival_intro != null">
+							<span class="content-block">
+								${survival_intro}
+								<t:if test="survival_chart != null">
+								${survival_chart}
+								</t:if>
+								<div class="backToTop" onclick="var pos = $(window).scrollTop(); $('html, body').animate({ scrollTop: pos - pos}, 200);">
+									<article class=""><i class="fa fa-arrow-circle-up" aria-hidden="true"></i> Back to Top</article>
+								</div>
+							</span>
+							</t:if>
+							<t:if test="stage_intro != null">
+							<span class="content-block">
+								${stage_intro}
+								<t:if test="stage_chart != null">
+								${stage_chart}
+								</t:if>
+								<div class="backToTop" onclick="var pos = $(window).scrollTop(); $('html, body').animate({ scrollTop: pos - pos}, 200);">
+									<article class=""><i class="fa fa-arrow-circle-up" aria-hidden="true"></i> Back to Top</article>
+								</div>
+							</span>
+							</t:if>
+							<t:if test="treatment_intro != null">
+							<span class="content-block">
+								${treatment_intro}
+								<t:if test="treatment_chart != null">
+								${treatment_chart}
+								</t:if>
+								<div class="backToTop" onclick="var pos = $(window).scrollTop(); $('html, body').animate({ scrollTop: pos - pos}, 200);">
+									<article class=""><i class="fa fa-arrow-circle-up" aria-hidden="true"></i> Back to Top</article>
+								</div>
+							</span>
+							</t:if>
+							<t:if test="lack_intro != null">
+							<span class="content-block">
+								${lack_intro}
+								<t:if test="lack_chart != null">
+								${lack_chart}
+								</t:if>
+								<div class="backToTop" onclick="var pos = $(window).scrollTop(); $('html, body').animate({ scrollTop: pos - pos}, 200);">
+									<article class=""><i class="fa fa-arrow-circle-up" aria-hidden="true"></i> Back to Top</article>
+								</div>
+							</span>
+							</t:if>
+						</div>
+					</div>
+				</div>
+			</div>
+
+		</div>
+	</div><!-- END TABS -->
+
+<script type="text/javascript">
+	$(document).ready(function() {
+		$('#hide-tab-1').click(function() {
+			$('#show-tab-1').addClass('show');
+			$('#hide-tab-1').addClass('hide');
+			$('#mobile-tab-1').addClass('show');
+		});
+		$('#show-tab-1').click(function() {
+			$('#show-tab-1').removeClass('show');
+			$('#hide-tab-1').removeClass('hide');
+			$('#mobile-tab-1').removeClass('show');
+		});
+		$('#hide-tab-2').click(function() {
+			$('#show-tab-2').addClass('show');
+			$('#hide-tab-2').addClass('hide');
+			$('#mobile-tab-2').addClass('show');
+		});
+		$('#show-tab-2').click(function() {
+			$('#show-tab-2').removeClass('show');
+			$('#hide-tab-2').removeClass('hide');
+			$('#mobile-tab-2').removeClass('show');
+		});
+		$('#hide-tab-3').click(function() {
+			$('#show-tab-3').addClass('show');
+			$('#hide-tab-3').addClass('hide');
+			$('#mobile-tab-3').addClass('show');
+		});
+		$('#show-tab-3').click(function() {
+			$('#show-tab-3').removeClass('show');
+			$('#hide-tab-3').removeClass('hide');
+			$('#mobile-tab-3').removeClass('show');
+		});
+		$('#hide-tab-4').click(function() {
+			$('#show-tab-4').addClass('show');
+			$('#hide-tab-4').addClass('hide');
+			$('#mobile-tab-4').addClass('show');
+		});
+		$('#show-tab-4').click(function() {
+			$('#show-tab-4').removeClass('show');
+			$('#hide-tab-4').removeClass('hide');
+			$('#mobile-tab-4').removeClass('show');
+		});
+		$('#hide-tab-5').click(function() {
+			$('#show-tab-5').addClass('show');
+			$('#hide-tab-5').addClass('hide');
+			$('#mobile-tab-5').addClass('show');
+		});
+		$('#show-tab-5').click(function() {
+			$('#show-tab-5').removeClass('show');
+			$('#hide-tab-5').removeClass('hide');
+			$('#mobile-tab-5').removeClass('show');
+		});
+	});
+</script>
