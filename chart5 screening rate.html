@@ -178,7 +178,10 @@
         height: 450
       },
       title: {
-        text: "State Ranking by High Risk Screening Rate"
+        text: "State Ranking by High Risk Screening Rate",
+        style: {
+          fontWeight: "bold"
+        }
       },
       credits: {
         enabled: false
@@ -301,7 +304,12 @@
       yAxis: {
         min: 0,
         title: {
-          text: "%"
+          text: "Percent of High Risk Population Receiving Screening"
+        },
+        labels: {
+          style: {
+            "fontSize": "16px"
+          }
         }
       },
       legend: {
