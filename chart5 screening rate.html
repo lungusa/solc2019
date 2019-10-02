@@ -55,111 +55,111 @@
   // console.log("state achieved for chart 2");
   // bar on graph changes to green based on state selection
   if (state == "NV") {
-    var slot22 = 0;
+    var slotScreening = 0;
   } else if (state == "CA") {
-    var slot22 = 1;
+    var slotScreening = 1;
   } else if (state == "WY") {
-    var slot22 = 2;
+    var slotScreening = 2;
   } else if (state == "OK") {
-    var slot22 = 3;
+    var slotScreening = 3;
   } else if (state == "NM") {
-    var slot22 = 4;
+    var slotScreening = 4;
   } else if (state == "AZ") {
-    var slot22 = 5;
+    var slotScreening = 5;
   } else if (state == "TX") {
-    var slot22 = 6;
+    var slotScreening = 6;
   } else if (state == "LA") {
-    var slot22 = 7;
+    var slotScreening = 7;
   } else if (state == "DC") {
-    var slot22 = 8;
+    var slotScreening = 8;
   } else if (state == "WV") {
-    var slot22 = 9;
+    var slotScreening = 9;
   } else if (state == "FL") {
-    var slot22 = 10;
+    var slotScreening = 10;
   } else if (state == "AR") {
-    var slot22 = 11;
+    var slotScreening = 11;
   } else if (state == "UT") {
-    var slot22 = 12;
+    var slotScreening = 12;
   } else if (state == "CO") {
-    var slot22 = 13;
+    var slotScreening = 13;
   } else if (state == "HI") {
-    var slot22 = 14;
+    var slotScreening = 14;
   } else if (state == "MS") {
-    var slot22 = 15;
+    var slotScreening = 15;
   } else if (state == "NJ") {
-    var slot22 = 16;
+    var slotScreening = 16;
   } else if (state == "NE") {
-    var slot22 = 17;
+    var slotScreening = 17;
   } else if (state == "NY") {
-    var slot22 = 18;
+    var slotScreening = 18;
   } else if (state == "TN") {
-    var slot22 = 19;
+    var slotScreening = 19;
   } else if (state == "WA") {
-    var slot22 = 20;
+    var slotScreening = 20;
   } else if (state == "AL") {
-    var slot22 = 21;
+    var slotScreening = 21;
   } else if (state == "Nation") {
-    var slot22 = 22;
+    var slotScreening = 22;
   } else if (state == "SC") {
-    var slot22 = 23;
+    var slotScreening = 23;
   } else if (state == "GA") {
-    var slot22 = 24;
+    var slotScreening = 24;
   } else if (state == "IL") {
-    var slot22 = 25;
+    var slotScreening = 25;
   } else if (state == "AK") {
-    var slot22 = 26;
+    var slotScreening = 26;
   } else if (state == "IN") {
-    var slot22 = 27;
+    var slotScreening = 27;
   } else if (state == "RI") {
-    var slot22 = 28;
+    var slotScreening = 28;
   } else if (state == "VA") {
-    var slot22 = 29;
+    var slotScreening = 29;
   } else if (state == "MT") {
-    var slot22 = 30;
+    var slotScreening = 30;
   } else if (state == "KS") {
-    var slot22 = 31;
+    var slotScreening = 31;
   } else if (state == "OH") {
-    var slot22 = 32;
+    var slotScreening = 32;
   } else if (state == "MO") {
-    var slot22 = 33;
+    var slotScreening = 33;
   } else if (state == "DE") {
-    var slot22 = 34;
+    var slotScreening = 34;
   } else if (state == "PA") {
-    var slot22 = 35;
+    var slotScreening = 35;
   } else if (state == "OR") {
-    var slot22 = 36;
+    var slotScreening = 36;
   } else if (state == "ND") {
-    var slot22 = 37;
+    var slotScreening = 37;
   } else if (state == "NC") {
-    var slot22 = 38;
+    var slotScreening = 38;
   } else if (state == "ID") {
-    var slot22 = 39;
+    var slotScreening = 39;
   } else if (state == "MN") {
-    var slot22 = 40;
+    var slotScreening = 40;
   } else if (state == "MI") {
-    var slot22 = 41;
+    var slotScreening = 41;
   } else if (state == "IA") {
-    var slot22 = 42;
+    var slotScreening = 42;
   } else if (state == "MD") {
-    var slot22 = 43;
+    var slotScreening = 43;
   } else if (state == "ME") {
-    var slot22 = 44;
+    var slotScreening = 44;
   } else if (state == "CT") {
-    var slot22 = 45;
+    var slotScreening = 45;
   } else if (state == "SD") {
-    var slot22 = 46;
+    var slotScreening = 46;
   } else if (state == "WI") {
-    var slot22 = 47;
+    var slotScreening = 47;
   } else if (state == "KY") {
-    var slot22 = 48;
+    var slotScreening = 48;
   } else if (state == "NH") {
-    var slot22 = 49;
+    var slotScreening = 49;
   } else if (state == "VT") {
-    var slot22 = 50;
+    var slotScreening = 50;
   } else if (state == "MA") {
-    var slot22 = 51;
+    var slotScreening = 51;
   } else {
-    var slot22 = 20;
+    var slotScreening = 22;
   }
 
   var chart2 = function() {
@@ -170,7 +170,7 @@
       chart: {
         events: {
           load: function() {
-            var stateBox = this.series[0].points[slot22];
+            var stateBox = this.series[0].points[slotScreening];
             this.tooltip.refresh(stateBox);
           }
         },
@@ -178,7 +178,7 @@
         height: 450
       },
       title: {
-        text: "State Ranking by SMOKING"
+        text: "State Ranking by High Risk Screening Rate"
       },
       credits: {
         enabled: false
@@ -192,7 +192,7 @@
           to: 6.5,
           color: "#ffd6da",
           label: {
-            text: "Bottom",
+            text: "Bottom<br/>Tier",
             style: {
               color: "#000000",
             },
@@ -203,7 +203,7 @@
           to: 17.5,
           color: "#cbd3d6",
           label: {
-            text: "Below<br/>Average",
+            text: "Below<br/>Average<br/>Tier",
             style: {
               color: "#000000",
             },
@@ -214,7 +214,7 @@
           to: 34.5,
           color: "#d7e6fa",
           label: {
-            text: "Average",
+            text: "Average<br/>Tier",
             style: {
               color: "#000000",
             },
@@ -225,7 +225,7 @@
           to: 46.5,
           color: "#9cf6ff",
           label: {
-            text: "Above<br/>Average",
+            text: "Above<br/>Average<br/>Tier",
             style: {
               color: "#000000",
             },
@@ -236,7 +236,7 @@
           to: 52.5,
           color: "#e6ffb0",
           label: {
-            text: "Top",
+            text: "Top<br/>Tier",
             style: {
               color: "#000000",
             },
@@ -553,7 +553,7 @@
       $("#chart2 .highcharts-series-group rect:nth-child(52)").css("fill", "#ed1b2d");
     }
     // nation bar label
-    $("#chart2 .highcharts-series-group rect:nth-child(21)").css("fill", "#7fba00");
+    $("#chart2 .highcharts-series-group rect:nth-child(23)").css("fill", "#7fba00");
 
   })
   // var state = function(){
