@@ -378,11 +378,14 @@
     $("#chartDiagnosis").empty();
     state = Cookies.get("state");
     Highcharts.setOptions({
-      colors: ["#a3a9ac", "#ed1b2d", "#b2ecff", "#3a75c4"]
+      colors: ["#555559", "#ed1b2d", "#b2ecff", "#3a75c4"]
     })
     Highcharts.chart('chartDiagnosis', {
       title: {
-        text: 'Stage at Diagnosis and 5-Year Survival Rate'
+        text: 'Stage at Diagnosis and 5-Year Survival Rate',
+        style: {
+          fontWeight: "bold"
+        }
       },
       xAxis: {
         categories: ['Stage at Diagnosis', '5-Year Survival'],
@@ -405,12 +408,21 @@
         valueSuffix: "%"
       },
       plotOptions: {
+        series: {
+          shadow: true
+        },
         bar: {
           stacking: 'normal',
           dataLabels: {
+            shadow: true,
             enabled: true,
             formatter: function() {
               return this.y + "%";
+            },
+            style: {
+              fontSize: "14px",
+              fontFamily: "'Lato', sans-serif",
+              textOutline: "2px"
             }
           }
         }

@@ -214,10 +214,10 @@ TABS
 		<label for="tab2"><span>Screening and Prevention</span></label>
 		<input id="tab3" type="radio" name="tabs">
 		<label for="tab3"><span>Summary</span></label>
-		<!-- <input id="tab4" type="radio" name="tabs">
+		<input id="tab4" type="radio" name="tabs">
 		<label for="tab4"><span>Tab 4 Label</span></label>
 		<input id="tab5" type="radio" name="tabs">
-		<label for="tab5" class="last"><span>Tab 5 Label</span></label> -->
+		<label for="tab5" class="last"><span>Tab 5 Label</span></label>
 
 		<!-- PANES -->
 		<div class="tab">
@@ -232,16 +232,12 @@ TABS
 							<h2>Lung Cancer Treatment</h2>
 							<t:if test="incidence_intro != null">
 							<span class="content-block">
-                <!-- A -->
 								${incidence_intro}
+                                                                <div id="item-928217472" class="templateComponent" style="display: inline;"></div>
 
-                <!-- B -->
-                <!-- chart 1 incidence -->
-                <div id="item-928217472" class="templateComponent" style="display: inline;"></div>
-
-								<!-- <t:if test="incidence_chart != null">
+								<t:if test="incidence_chart != null">
 								${incidence_chart}
-								</t:if> -->
+								</t:if>
 								<div class="backToTop" onclick="var pos = $(window).scrollTop(); $('html, body').animate({ scrollTop: pos - pos}, 200);">
 									<article class=""><i class="fa fa-arrow-circle-up" aria-hidden="true"></i> back to top</article>
 								</div>
@@ -249,15 +245,13 @@ TABS
 							</t:if>
 							<t:if test="survival_intro != null">
 							<span class="content-block">
-                <!-- C -->
 								${survival_intro}
 
-                <!-- D -->
-                <!-- chart 2 survival -->
-                <div id="item-928505770" class="templateComponent" style="display: inline;"></div>
-								<!-- <t:if test="survival_chart != null">
+                                                                <div id="item-928505770" class="templateComponent" style="display: inline;"></div>
+
+								<t:if test="survival_chart != null">
 								${survival_chart}
-								</t:if> -->
+								</t:if>
 								<div class="backToTop" onclick="var pos = $(window).scrollTop(); $('html, body').animate({ scrollTop: pos - pos}, 200);">
 									<article class=""><i class="fa fa-arrow-circle-up" aria-hidden="true"></i> back to top</article>
 								</div>
@@ -265,21 +259,10 @@ TABS
 							</t:if>
 							<t:if test="stage_intro != null">
 							<span class="content-block">
-                <!-- E -->
 								${stage_intro}
-
-                <!-- F -->
-                <!-- chart 3 horiz -->
-                <!-- EMBED -->
-                <div id="item-928637976" class="templateComponent" style="display: inline;"></div>
-
-
-
-                <!-- G -->
-                ${stage_text}
-								<!-- <t:if test="stage_chart != null">
+								<t:if test="stage_chart != null">
 								${stage_chart}
-								</t:if> -->
+								</t:if>
 								<div class="backToTop" onclick="var pos = $(window).scrollTop(); $('html, body').animate({ scrollTop: pos - pos}, 200);">
 									<article class=""><i class="fa fa-arrow-circle-up" aria-hidden="true"></i> back to top</article>
 								</div>
@@ -287,30 +270,21 @@ TABS
 							</t:if>
 							<t:if test="treatment_intro != null">
 							<span class="content-block">
-                <!-- H -->
 								${treatment_intro}
-
-                <!-- I -->
-                <!-- chart 4 surgery -->
-                <!-- EMBED -->
-                <div id="item-928638001" class="templateComponent" style="display: inline;"></div>
-
-
-								<!-- <t:if test="treatment_chart != null">
+								<t:if test="treatment_chart != null">
 								${treatment_chart}
-								</t:if> -->
+								</t:if>
 								<div class="backToTop" onclick="var pos = $(window).scrollTop(); $('html, body').animate({ scrollTop: pos - pos}, 200);">
 									<article class=""><i class="fa fa-arrow-circle-up" aria-hidden="true"></i> back to top</article>
 								</div>
 							</span>
 							</t:if>
-							<t:if test="lack_info != null">
+							<t:if test="lack_intro != null">
 							<span class="content-block">
-                <!-- J -->
-								${lack_info}
-								<!-- <t:if test="lack_chart != null">
+								${lack_intro}
+								<t:if test="lack_chart != null">
 								${lack_chart}
-								</t:if> -->
+								</t:if>
 								<div class="backToTop" onclick="var pos = $(window).scrollTop(); $('html, body').animate({ scrollTop: pos - pos}, 200);">
 									<article class=""><i class="fa fa-arrow-circle-up" aria-hidden="true"></i> back to top</article>
 								</div>
@@ -329,73 +303,45 @@ TABS
 					<div class="grade-summary">
 						<div class="summary">
 							<h2>Screening and Prevention</h2>
-							<t:if test="prevention_1_screening != null">
+							<t:if test="prevention_text_1 != null">
 							<span class="content-block">
-                <!-- K -->
-								${prevention_1_screening}
-
-                <!-- L -->
-                <!-- chart 7 medicaid map -->
-                <!-- EMBED -->
-                <!-- ?????????????????????????????????????????????????????? -->
-
-								<!-- <t:if test="prevention_chart_1 != null">
+								${prevention_text_1}
+								<t:if test="prevention_chart_1 != null">
 								${prevention_chart_1}
-								</t:if> -->
+								</t:if>
 								<div class="backToTop" onclick="var pos = $(window).scrollTop(); $('html, body').animate({ scrollTop: pos - pos}, 200);">
 									<article class=""><i class="fa fa-arrow-circle-up" aria-hidden="true"></i> Back to Top</article>
 								</div>
 							</span>
 							</t:if>
-							<t:if test="prevention_2_medicaid != null">
+							<t:if test="prevention_text_2 != null">
 							<span class="content-block">
-                <!-- M -->
-                <!-- Medicaid Coverage and Screening Text -->
-								${prevention_2_medicaid}
-
-                <!-- N -->
-                <!-- chart 7 medicaid map -->
-                <!-- EMBED -->
-                <!-- ?????????????????????????????????????????????????????? -->
-                <div id="item-928638050" class="templateComponent" style="display: inline;"></div>
-
-
-								<!-- <t:if test="prevention_chart_2 != null">
+								${prevention_text_2}
+								<t:if test="prevention_chart_2 != null">
 								${prevention_chart_2}
-								</t:if> -->
+								</t:if>
 								<div class="backToTop" onclick="var pos = $(window).scrollTop(); $('html, body').animate({ scrollTop: pos - pos}, 200);">
 									<article class=""><i class="fa fa-arrow-circle-up" aria-hidden="true"></i> Back to Top</article>
 								</div>
 							</span>
 							</t:if>
-							<t:if test="prevention_3_tobacco_intro != null">
+							<t:if test="prevention_text_3 != null">
 							<span class="content-block">
-                <!-- O -->
-                <!-- Tobacco intro -->
-								${prevention_3_tobacco_intro}
-
-                <!-- P -->
-                <!-- chart Smoking -->
-                <!-- EMBED -->
-                <div id="item-928638091" class="templateComponent" style="display: inline;"></div>
-
-
-								<!-- <t:if test="prevention_chart_3 != null">
+								${prevention_text_3}
+								<t:if test="prevention_chart_3 != null">
 								${prevention_chart_3}
-								</t:if> -->
+								</t:if>
 								<div class="backToTop" onclick="var pos = $(window).scrollTop(); $('html, body').animate({ scrollTop: pos - pos}, 200);">
 									<article class=""><i class="fa fa-arrow-circle-up" aria-hidden="true"></i> Back to Top</article>
 								</div>
 							</span>
 							</t:if>
-							<t:if test="prevention_4_sotcRadonAirPol != null">
+							<t:if test="prevention_text_4 != null">
 							<span class="content-block">
-                <!-- Q -->
-                <!-- SOTC & RADON -->
-								${prevention_4_sotcRadonAirPol}
-								<!-- <t:if test="prevention_chart_4 != null">
+								${prevention_text_4}
+								<t:if test="prevention_chart_4 != null">
 								${prevention_chart_4}
-								</t:if> -->
+								</t:if>
 								<div class="backToTop" onclick="var pos = $(window).scrollTop(); $('html, body').animate({ scrollTop: pos - pos}, 200);">
 									<article class=""><i class="fa fa-arrow-circle-up" aria-hidden="true"></i> Back to Top</article>
 								</div>
@@ -416,7 +362,6 @@ TABS
 							<h2>Summary</h2>
 							<t:if test="summary != null">
 							<span class="content-block">
-                <!-- R -->
 								${summary}
 								<div class="backToTop" onclick="var pos = $(window).scrollTop(); $('html, body').animate({ scrollTop: pos - pos}, 200);">
 									<article class=""><i class="fa fa-arrow-circle-up" aria-hidden="true"></i> Back to Top</article>
@@ -429,7 +374,7 @@ TABS
 			</div>
 
 			<!-- Tab 4 -->
-			<!-- <div id="tab-4" class="tab-content">
+			<div id="tab-4" class="tab-content">
 				<a href="javascript:void(0)" id="hide-tab-4">Tab 4</a>
 				<a href="javascript:void(0)" id="show-tab-4">Tab 4</a>
 				<div id="mobile-tab-4">
@@ -494,10 +439,10 @@ TABS
 						</div>
 					</div>
 				</div>
-			</div> -->
+			</div>
 
 			<!-- Tab 5 -->
-			<!-- <div id="tab-5" class="tab-content">
+			<div id="tab-5" class="tab-content">
 				<a href="javascript:void(0)" id="hide-tab-5">Tab 5</a>
 				<a href="javascript:void(0)" id="show-tab-4">Tab 5</a>
 				<div id="mobile-tab-5">
@@ -562,11 +507,10 @@ TABS
 						</div>
 					</div>
 				</div>
-			</div> -->
+			</div>
 
 		</div>
-	</div>
-	<!-- END TABS -->
+	</div><!-- END TABS -->
 
 <script type="text/javascript">
 	$(document).ready(function() {
