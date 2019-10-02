@@ -200,6 +200,13 @@ TABS
 }
 </style>
 
+<script type="text/javascript">
+	var currentState = "${filename}";
+	currentState = currentState.replace(".html", "");
+	console.log(currentState);
+	setState(currentState);
+</script>
+
 	<h1 class="internalPageTitle" style="background-color: #3a75c4;"><t:if test="headline != null">${headline}</t:if><t:else>${title}</t:else><div id="changeState"><a id="viewDiff" onclick="document.getElementById('location').click()">View a different state</a></div></h1>
 
 	<t:if test="state_intro != null">
@@ -408,6 +415,7 @@ TABS
 							</t:if>
 							<t:if test="prevention_4_sotcRadonAirPol != null">
 							<span class="content-block">
+								<h3>Tobacco</h3>
                 <!-- Q -->
                 <!-- SOTC & RADON -->
 								${prevention_4_sotcRadonAirPol}
