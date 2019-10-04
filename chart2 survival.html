@@ -110,30 +110,32 @@
     var slotSurv = 26;
   } else if (state == "NE") {
     var slotSurv = 27;
-  } else if (state == "OH") {
+  } else if (state == "MT") {
     var slotSurv = 28;
-  } else if (state == "NM") {
+  } else if (state == "OH") {
     var slotSurv = 29;
-  } else if (state == "MO") {
+  } else if (state == "NM") {
     var slotSurv = 30;
-  } else if (state == "SC") {
+  } else if (state == "MO") {
     var slotSurv = 31;
-  } else if (state == "GA") {
+  } else if (state == "SC") {
     var slotSurv = 32;
-  } else if (state == "WY") {
+  } else if (state == "GA") {
     var slotSurv = 33;
-  } else if (state == "IA") {
+  } else if (state == "WY") {
     var slotSurv = 34;
-  } else if (state == "HI") {
+  } else if (state == "IA") {
     var slotSurv = 35;
-  } else if (state == "TN") {
+  } else if (state == "HI") {
     var slotSurv = 36;
-  } else if (state == "WV") {
+  } else if (state == "TN") {
     var slotSurv = 37;
-  } else if (state == "AR") {
+  } else if (state == "WV") {
     var slotSurv = 38;
-  } else if (state == "OK") {
+  } else if (state == "AR") {
     var slotSurv = 39;
+  } else if (state == "OK") {
+    var slotSurv = 40;
   } else if (state == "AK") {
     var slotSurv = 41;
   } else if (state == "KY") {
@@ -142,12 +144,11 @@
     var slotSurv = 43;
   } else if (state == "MS") {
     var slotSurv = 44;
-  } else if (state == "AL") {
+  } else if (state == "AL"){
     var slotSurv = 45;
-    } else {
-    var slotSurv = 18;
+  } else {
+  var slotSurv = 18;
   }
-
   var chartSurvival = function() {
     Highcharts.setOptions({
       colors: ["#3a75c4", "#7fba00"]
@@ -191,7 +192,7 @@
         plotBands: [{
             from: -0.5,
             to: 6.5,
-            color: "#e6ffb0",
+            color: "#a5db30",
             label: {
               text: "Top<br>Tier",
               style: {
@@ -203,7 +204,7 @@
           {
             from: 6.5,
             to: 13.5,
-            color: "#9cf6ff",
+            color: "#fcffc4",
             label: {
               text: "Above<br/>Average<br>Tier",
               style: {
@@ -215,7 +216,7 @@
           {
             from: 13.5,
             to: 25.5,
-            color: "#d7e6fa",
+            color: "#cbd3d6",
             label: {
               text: "Average<br>Tier",
               style: {
@@ -227,7 +228,7 @@
           {
             from: 25.5,
             to: 35.5,
-            color: "#cbd3d6",
+            color: "#ffdeba",
             label: {
               text: "Below<br/>Average<br>Tier",
               style: {
@@ -238,7 +239,7 @@
           }, {
             from: 35.5,
             to: 45.5,
-            color: "#ffd6da",
+            color: "#ffbb73",
             label: {
               text: "Bottom<br>Tier",
               style: {
@@ -486,46 +487,46 @@
       $("#chartSurvival .highcharts-series-group rect:nth-child(31)").css("fill", "#ed1b2d");
     }
     else if (state == "MO") {
-      $("#chartSurvival .highcharts-series-group rect:nth-child(33)").css("fill", "#ed1b2d");
+      $("#chartSurvival .highcharts-series-group rect:nth-child(32)").css("fill", "#ed1b2d");
     }
     else if (state == "SC") {
-      $("#chartSurvival .highcharts-series-group rect:nth-child(34)").css("fill", "#ed1b2d");
+      $("#chartSurvival .highcharts-series-group rect:nth-child(33)").css("fill", "#ed1b2d");
     }
     else if (state == "GA") {
-      $("#chartSurvival .highcharts-series-group rect:nth-child(35)").css("fill", "#ed1b2d");
+      $("#chartSurvival .highcharts-series-group rect:nth-child(34)").css("fill", "#ed1b2d");
     }
     else if (state == "WY") {
-      $("#chartSurvival .highcharts-series-group rect:nth-child(36)").css("fill", "#ed1b2d");
+      $("#chartSurvival .highcharts-series-group rect:nth-child(35)").css("fill", "#ed1b2d");
     }
     else if (state == "IA") {
-      $("#chartSurvival .highcharts-series-group rect:nth-child(37)").css("fill", "#ed1b2d");
+      $("#chartSurvival .highcharts-series-group rect:nth-child(36)").css("fill", "#ed1b2d");
     }
     else if (state == "HI") {
-      $("#chartSurvival .highcharts-series-group rect:nth-child(38)").css("fill", "#ed1b2d");
+      $("#chartSurvival .highcharts-series-group rect:nth-child(37)").css("fill", "#ed1b2d");
     }
     else if (state == "TN") {
-      $("#chartSurvival .highcharts-series-group rect:nth-child(39)").css("fill", "#ed1b2d");
+      $("#chartSurvival .highcharts-series-group rect:nth-child(38)").css("fill", "#ed1b2d");
     }
     else if (state == "WV") {
-      $("#chartSurvival .highcharts-series-group rect:nth-child(40)").css("fill", "#ed1b2d");
+      $("#chartSurvival .highcharts-series-group rect:nth-child(39)").css("fill", "#ed1b2d");
     }
     else if (state == "AR") {
-      $("#chartSurvival .highcharts-series-group rect:nth-child(41)").css("fill", "#ed1b2d");
+      $("#chartSurvival .highcharts-series-group rect:nth-child(40)").css("fill", "#ed1b2d");
     }
     else if (state == "OK") {
-      $("#chartSurvival .highcharts-series-group rect:nth-child(42)").css("fill", "#ed1b2d");
+      $("#chartSurvival .highcharts-series-group rect:nth-child(41)").css("fill", "#ed1b2d");
     }
     else if (state == "AK") {
-      $("#chartSurvival .highcharts-series-group rect:nth-child(43)").css("fill", "#ed1b2d");
+      $("#chartSurvival .highcharts-series-group rect:nth-child(42)").css("fill", "#ed1b2d");
     }
     else if (state == "KY") {
-      $("#chartSurvival .highcharts-series-group rect:nth-child(44)").css("fill", "#ed1b2d");
+      $("#chartSurvival .highcharts-series-group rect:nth-child(43)").css("fill", "#ed1b2d");
     }
     else if (state == "LA") {
-      $("#chartSurvival .highcharts-series-group rect:nth-child(45)").css("fill", "#ed1b2d");
+      $("#chartSurvival .highcharts-series-group rect:nth-child(44)").css("fill", "#ed1b2d");
     }
     else if (state == "MS") {
-      $("#chartSurvival .highcharts-series-group rect:nth-child(46)").css("fill", "#ed1b2d");
+      $("#chartSurvival .highcharts-series-group rect:nth-child(45)").css("fill", "#ed1b2d");
     }
     else if (state == "AL") {
       $("#chartSurvival .highcharts-series-group rect:nth-child(46)").css("fill", "#ed1b2d");
@@ -535,7 +536,7 @@
 
 
     //nationwide highlight
-    $("#chartSurvival .highcharts-series-group rect:nth-child(19)").css("fill", "#7fba00");
+    $("#chartSurvival .highcharts-series-group rect:nth-child(19)").css("fill", "#555559");
 
   })
   // var state = function(){

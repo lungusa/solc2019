@@ -83,7 +83,7 @@
     var slotSmoking = 12;
   } else if (state == "RI") {
     var slotSmoking = 13;
-  } else if (state == "ME") {
+  } else if (state == "NE") {
     var slotSmoking = 14;
   } else if (state == "IL") {
     var slotSmoking = 15;
@@ -194,7 +194,7 @@
         plotBands: [{
           from: -0.5,
           to: 1.5,
-          color: "#e6ffb0",
+          color: "#a5db30",
           label: {
             text: "Top<br/>Tier",
             style: {
@@ -205,7 +205,7 @@
         },{
           from: 1.5,
           to: 12.5,
-          color: "#9cf6ff",
+          color: "#fcffc4",
           label: {
             text: "Above<br/>Average<br/>Tier",
             style: {
@@ -216,7 +216,7 @@
         },{
           from: 12.5,
           to: 34.5,
-          color: "#d7e6fa",
+          color: "#cbd3d6",
           label: {
             text: "Average<br/>Tier",
             style: {
@@ -227,7 +227,7 @@
         },{
           from: 34.5,
           to: 45.5,
-          color: "#cbd3d6",
+          color: "#ffdeba",
           label: {
             text: "Below<br/>Average<br/>Tier",
             style: {
@@ -238,7 +238,7 @@
         },{
           from: 45.5,
           to: 51.5,
-          color: "#ffd6da",
+          color: "#ffbb73",
           label: {
             text: "Bottom<br/>Tier",
             style: {
@@ -508,7 +508,7 @@
     else if (state == "GA") {
       $("#chartSmoking .highcharts-series-group rect:nth-child(32)").css("fill", "#ed1b2d");
     }
-    else if (state == "MN") {
+    else if (state == "NM") {
       $("#chartSmoking .highcharts-series-group rect:nth-child(33)").css("fill", "#ed1b2d");
     }
     else if (state == "NV") {
@@ -569,7 +569,7 @@
       $("#chartSmoking .highcharts-series-group rect:nth-child(52)").css("fill", "#ed1b2d");
     }
     //nationwide highlight
-    $("#chartSmoking .highcharts-series-group rect:nth-child(25)").css("fill", "#7fba00");
+    $("#chartSmoking .highcharts-series-group rect:nth-child(25)").css("fill", "#555559");
 
 
   })
