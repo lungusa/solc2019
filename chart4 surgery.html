@@ -55,105 +55,105 @@
   var state = Cookies.get('state');
   // bar on graph changes to green based on state selection
   if (state == "MA") {
-    var slotSurg = 0;
+    var tooltipSurg = 0;
   } else if (state == "RI") {
-    var slotSurg = 1;
+    var tooltipSurg = 1;
   } else if (state == "NY") {
-    var slotSurg = 2;
+    var tooltipSurg = 2;
   } else if (state == "CT") {
-    var slotSurg = 3;
+    var tooltipSurg = 3;
   } else if (state == "NJ") {
-    var slotSurg = 4;
+    var tooltipSurg = 4;
   } else if (state == "NH") {
-    var slotSurg = 5;
+    var tooltipSurg = 5;
   } else if (state == "MD") {
-    var slotSurg = 6;
+    var tooltipSurg = 6;
   } else if (state == "UT") {
-    var slotSurg = 7;
+    var tooltipSurg = 7;
   } else if (state == "MN") {
-    var slotSurg = 8;
+    var tooltipSurg = 8;
   } else if (state == "ME") {
-    var slotSurg = 9;
+    var tooltipSurg = 9;
   } else if (state == "PA") {
-    var slotSurg = 10;
+    var tooltipSurg = 10;
   } else if (state == "WI") {
-    var slotSurg = 11;
+    var tooltipSurg = 11;
   } else if (state == "IL") {
-    var slotSurg = 12;
+    var tooltipSurg = 12;
   } else if (state == "FL") {
-    var slotSurg = 13;
+    var tooltipSurg = 13;
   } else if (state == "CA") {
-    var slotSurg = 14;
+    var tooltipSurg = 14;
   } else if (state == "NE") {
-    var slotSurg = 15;
+    var tooltipSurg = 15;
   } else if (state == "Nation") {
-    var slotSurg = 16;
+    var tooltipSurg = 16;
   } else if (state == "OH") {
-    var slotSurg = 17;
+    var tooltipSurg = 17;
   } else if (state == "OR") {
-    var slotSurg = 18;
+    var tooltipSurg = 18;
   } else if (state == "VA") {
-    var slotSurg = 19;
+    var tooltipSurg = 19;
   } else if (state == "KY") {
-    var slotSurg = 20;
+    var tooltipSurg = 20;
   } else if (state == "CO") {
-    var slotSurg = 21;
+    var tooltipSurg = 21;
   } else if (state == "WA") {
-    var slotSurg = 22;
+    var tooltipSurg = 22;
   } else if (state == "NC") {
-    var slotSurg = 23;
+    var tooltipSurg = 23;
   } else if (state == "TN") {
-    var slotSurg = 24;
+    var tooltipSurg = 24;
   } else if (state == "MI") {
-    var slotSurg = 25;
+    var tooltipSurg = 25;
   } else if (state == "SC") {
-    var slotSurg = 26;
+    var tooltipSurg = 26;
   } else if (state == "MT") {
-    var slotSurg = 27;
+    var tooltipSurg = 27;
   } else if (state == "ID") {
-    var slotSurg = 28;
+    var tooltipSurg = 28;
   } else if (state == "WV") {
-    var slotSurg = 29;
+    var tooltipSurg = 29;
   } else if (state == "DE") {
-    var slotSurg = 30;
+    var tooltipSurg = 30;
   } else if (state == "ND") {
-    var slotSurg = 31;
+    var tooltipSurg = 31;
   } else if (state == "MO") {
-    var slotSurg = 32;
+    var tooltipSurg = 32;
   } else if (state == "HI") {
-    var slotSurg = 33;
+    var tooltipSurg = 33;
   } else if (state == "GA") {
-    var slotSurg = 34;
+    var tooltipSurg = 34;
   } else if (state == "VT") {
-    var slotSurg = 35;
+    var tooltipSurg = 35;
   } else if (state == "AL") {
-    var slotSurg = 36;
+    var tooltipSurg = 36;
   } else if (state == "IA") {
-    var slotSurg = 37;
+    var tooltipSurg = 37;
   } else if (state == "AR") {
-    var slotSurg = 38;
+    var tooltipSurg = 38;
   } else if (state == "IN") {
-    var slotSurg = 39;
+    var tooltipSurg = 39;
   } else if (state == "MS") {
-    var slotSurg = 40
+    var tooltipSurg = 40
   } else if (state == "LA") {
-    var slotSurg = 41;
+    var tooltipSurg = 41;
   } else if (state == "AZ") {
-    var slotSurg = 42;
+    var tooltipSurg = 42;
   } else if (state == "TX") {
-    var slotSurg = 43;
+    var tooltipSurg = 43;
   } else if (state == "WY") {
-    var slotSurg = 44;
+    var tooltipSurg = 44;
   } else if (state == "AK") {
-    var slotSurg = 45;
+    var tooltipSurg = 45;
   } else if (state == "SD") {
-    var slotSurg = 46;
+    var tooltipSurg = 46;
   } else if (state == "OK") {
-    var slotSurg = 47;
+    var tooltipSurg = 47;
   } else if (state == "NM") {
-    var slotSurg = 48;
+    var tooltipSurg = 48;
   } else {
-    var slotSurg = 16;
+    var tooltipSurg = 16;
   }
 
   var chartSurgery = function() {
@@ -165,7 +165,7 @@
       chart: {
         events: {
           load: function() {
-            var stateBox = this.series[0].points[slotSurg];
+            var stateBox = this.series[0].points[tooltipSurg];
             this.tooltip.refresh(stateBox);
           }
         },

@@ -55,111 +55,111 @@
   // console.log("state achieved for chart 2");
   // bar on graph changes to green based on state selection
   if (state == "NV") {
-    var slotScreening = 0;
+    var tooltipScreening = 0;
   } else if (state == "CA") {
-    var slotScreening = 1;
+    var tooltipScreening = 1;
   } else if (state == "WY") {
-    var slotScreening = 2;
+    var tooltipScreening = 2;
   } else if (state == "OK") {
-    var slotScreening = 3;
+    var tooltipScreening = 3;
   } else if (state == "NM") {
-    var slotScreening = 4;
+    var tooltipScreening = 4;
   } else if (state == "AZ") {
-    var slotScreening = 5;
+    var tooltipScreening = 5;
   } else if (state == "TX") {
-    var slotScreening = 6;
+    var tooltipScreening = 6;
   } else if (state == "LA") {
-    var slotScreening = 7;
+    var tooltipScreening = 7;
   } else if (state == "DC") {
-    var slotScreening = 8;
+    var tooltipScreening = 8;
   } else if (state == "WV") {
-    var slotScreening = 9;
+    var tooltipScreening = 9;
   } else if (state == "FL") {
-    var slotScreening = 10;
+    var tooltipScreening = 10;
   } else if (state == "AR") {
-    var slotScreening = 11;
+    var tooltipScreening = 11;
   } else if (state == "UT") {
-    var slotScreening = 12;
+    var tooltipScreening = 12;
   } else if (state == "CO") {
-    var slotScreening = 13;
+    var tooltipScreening = 13;
   } else if (state == "HI") {
-    var slotScreening = 14;
+    var tooltipScreening = 14;
   } else if (state == "MS") {
-    var slotScreening = 15;
+    var tooltipScreening = 15;
   } else if (state == "NJ") {
-    var slotScreening = 16;
+    var tooltipScreening = 16;
   } else if (state == "NE") {
-    var slotScreening = 17;
+    var tooltipScreening = 17;
   } else if (state == "NY") {
-    var slotScreening = 18;
+    var tooltipScreening = 18;
   } else if (state == "TN") {
-    var slotScreening = 19;
+    var tooltipScreening = 19;
   } else if (state == "WA") {
-    var slotScreening = 20;
+    var tooltipScreening = 20;
   } else if (state == "AL") {
-    var slotScreening = 21;
+    var tooltipScreening = 21;
   } else if (state == "Nation") {
-    var slotScreening = 22;
+    var tooltipScreening = 22;
   } else if (state == "SC") {
-    var slotScreening = 23;
+    var tooltipScreening = 23;
   } else if (state == "GA") {
-    var slotScreening = 24;
+    var tooltipScreening = 24;
   } else if (state == "IL") {
-    var slotScreening = 25;
+    var tooltipScreening = 25;
   } else if (state == "AK") {
-    var slotScreening = 26;
+    var tooltipScreening = 26;
   } else if (state == "IN") {
-    var slotScreening = 27;
+    var tooltipScreening = 27;
   } else if (state == "RI") {
-    var slotScreening = 28;
+    var tooltipScreening = 28;
   } else if (state == "VA") {
-    var slotScreening = 29;
+    var tooltipScreening = 29;
   } else if (state == "MT") {
-    var slotScreening = 30;
+    var tooltipScreening = 30;
   } else if (state == "KS") {
-    var slotScreening = 31;
+    var tooltipScreening = 31;
   } else if (state == "OH") {
-    var slotScreening = 32;
+    var tooltipScreening = 32;
   } else if (state == "MO") {
-    var slotScreening = 33;
+    var tooltipScreening = 33;
   } else if (state == "DE") {
-    var slotScreening = 34;
+    var tooltipScreening = 34;
   } else if (state == "PA") {
-    var slotScreening = 35;
+    var tooltipScreening = 35;
   } else if (state == "OR") {
-    var slotScreening = 36;
+    var tooltipScreening = 36;
   } else if (state == "ND") {
-    var slotScreening = 37;
+    var tooltipScreening = 37;
   } else if (state == "NC") {
-    var slotScreening = 38;
+    var tooltipScreening = 38;
   } else if (state == "ID") {
-    var slotScreening = 39;
+    var tooltipScreening = 39;
   } else if (state == "MN") {
-    var slotScreening = 40;
+    var tooltipScreening = 40;
   } else if (state == "MI") {
-    var slotScreening = 41;
+    var tooltipScreening = 41;
   } else if (state == "IA") {
-    var slotScreening = 42;
+    var tooltipScreening = 42;
   } else if (state == "MD") {
-    var slotScreening = 43;
+    var tooltipScreening = 43;
   } else if (state == "ME") {
-    var slotScreening = 44;
+    var tooltipScreening = 44;
   } else if (state == "CT") {
-    var slotScreening = 45;
+    var tooltipScreening = 45;
   } else if (state == "SD") {
-    var slotScreening = 46;
+    var tooltipScreening = 46;
   } else if (state == "WI") {
-    var slotScreening = 47;
+    var tooltipScreening = 47;
   } else if (state == "KY") {
-    var slotScreening = 48;
+    var tooltipScreening = 48;
   } else if (state == "NH") {
-    var slotScreening = 49;
+    var tooltipScreening = 49;
   } else if (state == "VT") {
-    var slotScreening = 50;
+    var tooltipScreening = 50;
   } else if (state == "MA") {
-    var slotScreening = 51;
+    var tooltipScreening = 51;
   } else {
-    var slotScreening = 22;
+    var tooltipScreening = 22;
   }
 
   var chart2 = function() {
@@ -170,7 +170,7 @@
       chart: {
         events: {
           load: function() {
-            var stateBox = this.series[0].points[slotScreening];
+            var stateBox = this.series[0].points[tooltipScreening];
             this.tooltip.refresh(stateBox);
           }
         },

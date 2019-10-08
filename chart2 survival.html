@@ -55,99 +55,99 @@
   var state = Cookies.get('state');
   // bar on graph changes to green based on state selection
   if (state == "NY") {
-    var slotSurv = 0
+    var tooltipSurv = 0
   } else if (state == "CT") {
-    var slotSurv = 1;
+    var tooltipSurv = 1;
   } else if (state == "MN") {
-    var slotSurv = 2;
+    var tooltipSurv = 2;
   } else if (state == "MD") {
-    var slotSurv = 3;
+    var tooltipSurv = 3;
   } else if (state == "CO") {
-    var slotSurv = 4;
+    var tooltipSurv = 4;
   } else if (state == "NJ") {
-    var slotSurv = 5;
+    var tooltipSurv = 5;
   } else if (state == "NH") {
-    var slotSurv = 6;
+    var tooltipSurv = 6;
   } else if (state == "IL") {
-    var slotSurv = 7;
+    var tooltipSurv = 7;
   } else if (state == "RI") {
-    var slotSurv = 8;
+    var tooltipSurv = 8;
   } else if (state == "ND") {
-    var slotSurv = 9;
+    var tooltipSurv = 9;
   } else if (state == "MI") {
-    var slotSurv = 10;
+    var tooltipSurv = 10;
   } else if (state == "FL") {
-    var slotSurv = 11;
+    var tooltipSurv = 11;
   } else if (state == "VT") {
-    var slotSurv = 12;
+    var tooltipSurv = 12;
   } else if (state == "OR") {
-    var slotSurv = 13;
+    var tooltipSurv = 13;
   } else if (state == "PA") {
-    var slotSurv = 14;
+    var tooltipSurv = 14;
   } else if (state == "WA") {
-    var slotSurv = 15;
+    var tooltipSurv = 15;
   } else if (state == "WI") {
-    var slotSurv = 16;
+    var tooltipSurv = 16;
   } else if (state == "ME") {
-    var slotSurv = 17;
+    var tooltipSurv = 17;
   } else if (state == "Nation") {
-    var slotSurv = 18;
+    var tooltipSurv = 18;
   } else if (state == "DE") {
-    var slotSurv = 19;
+    var tooltipSurv = 19;
   } else if (state == "CA") {
-    var slotSurv = 20;
+    var tooltipSurv = 20;
   } else if (state == "NC") {
-    var slotSurv = 21;
+    var tooltipSurv = 21;
   } else if (state == "UT") {
-    var slotSurv = 22;
+    var tooltipSurv = 22;
   } else if (state == "AZ") {
-    var slotSurv = 23;
+    var tooltipSurv = 23;
   } else if (state == "VA") {
-    var slotSurv = 24;
+    var tooltipSurv = 24;
   } else if (state == "TX") {
-    var slotSurv = 25;
+    var tooltipSurv = 25;
   } else if (state == "ID") {
-    var slotSurv = 26;
+    var tooltipSurv = 26;
   } else if (state == "NE") {
-    var slotSurv = 27;
+    var tooltipSurv = 27;
   } else if (state == "MT") {
-    var slotSurv = 28;
+    var tooltipSurv = 28;
   } else if (state == "OH") {
-    var slotSurv = 29;
+    var tooltipSurv = 29;
   } else if (state == "NM") {
-    var slotSurv = 30;
+    var tooltipSurv = 30;
   } else if (state == "MO") {
-    var slotSurv = 31;
+    var tooltipSurv = 31;
   } else if (state == "SC") {
-    var slotSurv = 32;
+    var tooltipSurv = 32;
   } else if (state == "GA") {
-    var slotSurv = 33;
+    var tooltipSurv = 33;
   } else if (state == "WY") {
-    var slotSurv = 34;
+    var tooltipSurv = 34;
   } else if (state == "IA") {
-    var slotSurv = 35;
+    var tooltipSurv = 35;
   } else if (state == "HI") {
-    var slotSurv = 36;
+    var tooltipSurv = 36;
   } else if (state == "TN") {
-    var slotSurv = 37;
+    var tooltipSurv = 37;
   } else if (state == "WV") {
-    var slotSurv = 38;
+    var tooltipSurv = 38;
   } else if (state == "AR") {
-    var slotSurv = 39;
+    var tooltipSurv = 39;
   } else if (state == "OK") {
-    var slotSurv = 40;
+    var tooltipSurv = 40;
   } else if (state == "AK") {
-    var slotSurv = 41;
+    var tooltipSurv = 41;
   } else if (state == "KY") {
-    var slotSurv = 42;
+    var tooltipSurv = 42;
   } else if (state == "LA") {
-    var slotSurv = 43;
+    var tooltipSurv = 43;
   } else if (state == "MS") {
-    var slotSurv = 44;
+    var tooltipSurv = 44;
   } else if (state == "AL"){
-    var slotSurv = 45;
+    var tooltipSurv = 45;
   } else {
-  var slotSurv = 18;
+  var tooltipSurv = 18;
   }
   var chartSurvival = function() {
     Highcharts.setOptions({
@@ -159,7 +159,7 @@
       chart: {
         events: {
           load: function() {
-            var stateBox = this.series[0].points[slotSurv];
+            var stateBox = this.series[0].points[tooltipSurv];
             this.tooltip.refresh(stateBox);
           }
         },
