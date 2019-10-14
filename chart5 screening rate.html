@@ -40,6 +40,10 @@
     font-family: 'Lato', sans-serif !important;
   }
 
+  .highcharts-grid-line{
+    opacity: 0.6;
+  }
+
   @media (max-width: 700px) {
     #chartScreening {
       /*height: 1000px;*/
@@ -178,7 +182,7 @@
         height: 450
       },
       title: {
-        text: "State Ranking by High Risk Screening Rate",
+        text: "State Ranking by High-Risk Screening Rate",
         style: {
           fontWeight: "bold"
         }
@@ -232,7 +236,7 @@
             style: {
               color: "#000000",
             },
-            y: 100
+            y: 150
           }
         }, {
           from: 44.5,
@@ -243,7 +247,7 @@
             style: {
               color: "#000000",
             },
-            y: 150
+            y: 210
           }
         }],
         categories: [
@@ -304,7 +308,7 @@
       yAxis: {
         min: 0,
         title: {
-          text: "Percent of High Risk Population Receiving Screening"
+          text: "Percent of High-Risk Population Receiving Screening"
         },
         labels: {
           style: {
