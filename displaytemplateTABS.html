@@ -7,13 +7,13 @@
 
 #changeState {margin-top: -8px; float: right;}
 
-#changeState a {font-size: 14px; font-weight: 700; line-height: 40px; color: #3a75c4; background: #ffffff; height: 40px; padding: 0 20px; display: inline-block; border-radius: 25px; -webkit-border-radius: 25px; -moz-border-radius: 25px; -ms-border-radius: 25px; -o-border-radius: 25px; cursor: pointer;}
+#changeState a {font-size: 14px; font-weight: 700; line-height: 40px; color: #00a5db; background: #ffffff; height: 40px; padding: 0 20px; display: inline-block; border-radius: 25px; -webkit-border-radius: 25px; -moz-border-radius: 25px; -ms-border-radius: 25px; -o-border-radius: 25px; cursor: pointer;}
 
 #changeState a:hover {text-decoration: none; color: #ffffff; background: #555559;}
 
 .backToTop {margin: 10px 25px 40px; padding: 0 0 40px; border-bottom: 2px solid #d7d8d9;}
 
-.backToTop article {font-size: 13px; font-weight: 700; text-transform: uppercase; color: #3a75c4; display: inline-block; cursor: pointer;}
+.backToTop article {font-size: 13px; font-weight: 700; text-transform: uppercase; color: #00a5db; display: inline-block; cursor: pointer;}
 
 .backToTop article:hover {color: #555559;}
 
@@ -110,19 +110,19 @@ TABS
 
 #tabs-container input[type="radio"] {display: none;}
 
-#tabs-container label {font-size: 16px; font-weight: 900; color: #ffffff; text-align: center; line-height: 18px; background: #3a75c4; vertical-align: middle; height: 60px; margin: 0 2px 0 0; padding: 0 25px; display: inline-table; border: 0px solid #a3a9ac; border-bottom: 0 none; border-radius: 12px 12px 0 0;}
+#tabs-container label {font-size: 16px; font-weight: 900; color: #ffffff; text-align: center; line-height: 18px; background: #00a5db; vertical-align: middle; height: 60px; margin: 0 2px 0 0; padding: 0 25px; display: inline-table; border: 1px solid #00a5db; border-bottom: 1px solid #00a5db; border-radius: 12px 12px 0 0;}
 
 #tabs-container label.last {margin: 0;}
 
-#tabs-container label:hover {color: #ffffff; text-decoration: none; background: #555559; cursor: pointer;}
+#tabs-container label:hover {color: #ffffff; text-decoration: none; background: #555559; border: 1px solid #555559; border-bottom: 1px solid #555559; cursor: pointer;}
 
 #tabs-container label span {vertical-align: middle; display: table-cell;}
 
-#tabs-container input:checked + label {font-weight: 900; color: #555559; background: #ffffff; margin: 0 2px -1px 0; padding: 1px 25px 0; border: 1px solid #3a75c4; border-bottom: 0 none;}
+#tabs-container input:checked + label {font-weight: 900; color: #555559; background: #ffffff; margin: 0 2px 0 0; padding: 1px 25px 0; border: 1px solid #00a5db; border-bottom: 1px solid #ffffff;}
 
-#tabs-container input:checked + label:hover {color: #a3a9ac; text-decoration: none; background: #ffffff; cursor: default;}
+#tabs-container input:checked + label:hover {color: #555559; text-decoration: none; background: #ffffff; cursor: default;}
 
-.tab {margin: 0; padding: 35px 5px; border: 1px solid #3a75c4; border-radius: 0; clear: both;}
+.tab {margin: -1px 0 0; padding: 35px 5px; border: 1px solid #00a5db; border-radius: 0; clear: both;}
 
 .tab > .tab-content {display: none;}
 
@@ -141,25 +141,24 @@ TABS
 	#show-tab-1.show, #show-tab-2.show, #show-tab-3.show, #show-tab-4.show, #show-tab-5.show {color: #ffffff; background-color: #555559; display: block;}
 	#tab1 ~ .tab #tab-1, #tab2 ~ .tab #tab-2, #tab3 ~ .tab #tab-3, #tab4 ~ .tab #tab-4, #tab5 ~ .tab #tab-5 {display: block;}
 	#tabs-container .tab {padding: 0; border: 0 none;}
-	#tabs-container .tab .tab-content {margin-bottom: 15px; padding: 0; display: block; border: 1px solid #3a75c4;}
+	#tabs-container .tab .tab-content {margin-bottom: 15px; padding: 0; display: block; border: 1px solid #00a5db;}
 	#mobile-tab-1, #mobile-tab-2, #mobile-tab-3, #mobile-tab-4, #mobile-tab-5 {display: none; position: relative;}
 	#mobile-tab-1.show, #mobile-tab-2.show, #mobile-tab-3.show, #mobile-tab-4.show, #mobile-tab-5.show {display: block;}
 	#tabs-container .tab #hide-tab-1.hide, #tabs-container .tab #hide-tab-2.hide, #tabs-container .tab #hide-tab-3.hide, #tabs-container .tab #hide-tab-4.hide, #tabs-container .tab #hide-tab-5.hide {display: none;}
 
 	#tabs-container .tab #show-tab-1, #tabs-container .tab #hide-tab-1, #tabs-container .tab #show-tab-2, #tabs-container .tab #hide-tab-2, #tabs-container .tab #show-tab-3, #tabs-container .tab #hide-tab-3, #tabs-container .tab #show-tab-4, #tabs-container .tab #hide-tab-4, #tabs-container .tab #show-tab-5, #tabs-container .tab #hide-tab-5 {font-size: 16px; font-weight: 700; line-height: 1.25em; padding: 15px 45px 15px 15px;}
-	#tabs-container .tab #hide-tab-1, #tabs-container .tab #hide-tab-2, #tabs-container .tab #hide-tab-3, #tabs-container .tab #hide-tab-4, #tabs-container .tab #hide-tab-5 {color: #3a75c4; display: block;}
+	#tabs-container .tab #hide-tab-1, #tabs-container .tab #hide-tab-2, #tabs-container .tab #hide-tab-3, #tabs-container .tab #hide-tab-4, #tabs-container .tab #hide-tab-5 {color: #00a5db; display: block;}
 	#tabs-container .tab #show-tab-1, #tabs-container .tab #show-tab-2, #tabs-container .tab #show-tab-3, #tabs-container .tab #show-tab-4, #tabs-container .tab #show-tab-5 {color: #ffffff;}
 	#tabs-container .tab #show-tab-1:hover, #tabs-container .tab #hide-tab-1:hover, #tabs-container .tab #show-tab-2:hover, #tabs-container .tab #hide-tab-2:hover, #tabs-container .tab #show-tab-3:hover, #tabs-container .tab #hide-tab-3:hover, #tabs-container .tab #show-tab-4:hover, #tabs-container .tab #hide-tab-4:hover, #tabs-container .tab #show-tab-5:hover, #tabs-container .tab #hide-tab-5:hover {text-decoration: none;}
 
-
 	#tabs-container .tab #show-tab-1, #tabs-container .tab #show-tab-2, #tabs-container .tab #show-tab-3, #tabs-container .tab #show-tab-4, #tabs-container .tab #show-tab-5 {padding-bottom: 15px;}
 	#tabs-container .tab #show-tab-1:before, #tabs-container .tab #show-tab-2:before, #tabs-container .tab #show-tab-3:before, #tabs-container .tab #show-tab-4:before, #tabs-container .tab #show-tab-5:before {font-family: FontAwesome; font-size: 14px; font-style: normal; font-weight: normal; color: #ffffff; text-decoration: inherit; padding-left: 15px; float: right; margin-right: -30px; content: "\f077";}
-	#tabs-container .tab #hide-tab-1:before, #tabs-container .tab #hide-tab-2:before, #tabs-container .tab #hide-tab-3:before, #tabs-container .tab #hide-tab-4:before, #tabs-container .tab #hide-tab-5:before {font-family: FontAwesome; font-size: 14px; font-style: normal; font-weight: normal; color: #3a75c4; text-decoration: inherit; padding-left: 15px; float: right; margin-right: -30px; content: "\f078";}
+	#tabs-container .tab #hide-tab-1:before, #tabs-container .tab #hide-tab-2:before, #tabs-container .tab #hide-tab-3:before, #tabs-container .tab #hide-tab-4:before, #tabs-container .tab #hide-tab-5:before {font-family: FontAwesome; font-size: 14px; font-style: normal; font-weight: normal; color: #00a5db; text-decoration: inherit; padding-left: 15px; float: right; margin-right: -30px; content: "\f078";}
 	#hide-tab-1:target + #show-tab-1, #hide-tab-1:target ~ #mobile-tab-1, #hide-tab-2:target + #show-tab-2, #hide-tab-2:target ~ #mobile-tab-2, #hide-tab-3:target + #show-tab-3, #hide-tab-3:target ~ #mobile-tab-3, #hide-tab-4:target + #show-tab-4, #hide-tab-4:target ~ #mobile-tab-4, #hide-tab-5:target + #show-tab-5, #hide-tab-5:target ~ #mobile-tab-5 {display: block;}
 	#mobile-tab-1, #mobile-tab-2, #mobile-tab-3, #mobile-tab-4, #mobile-tab-5 {margin-left: -15px; margin-right: -45px;}
 	#mobile-tab-1 .grade-summary, #mobile-tab-2 .grade-summary, #mobile-tab-3 .grade-summary, #mobile-tab-4 .grade-summary, #mobile-tab-5 .grade-summary {margin-bottom: -15px; padding: 0 45px 15px 15px;}
 	#mobile-tab-1 .grade-summary h2:nth-child(1), #mobile-tab-2 .grade-summary h2:nth-child(1), #mobile-tab-3 .grade-summary h2:nth-child(1), #mobile-tab-4 .grade-summary h2:nth-child(1), #mobile-tab-5 .grade-summary h2:nth-child(1) {display: none;}
-	.summary {padding: 40px; border-top: 1px solid #3a75c4;}
+	.summary {padding: 40px; border-top: 1px solid #00a5db;}
 }
 
 @media (max-width: 1136px) {
@@ -207,7 +206,7 @@ TABS
 	setState(currentState);
 </script>
 
-	<h1 class="internalPageTitle" style="background-color: #3a75c4;"><t:if test="headline != null">${headline}</t:if><t:else>${title}</t:else><div id="changeState"><a id="viewDiff" onclick="document.getElementById('location').click()">View a different state</a></div></h1>
+	<h1 class="internalPageTitle"><t:if test="headline != null">${headline}</t:if><t:else>${title}</t:else><div id="changeState"><a id="viewDiff" onclick="document.getElementById('location').click()">View a different state</a></div></h1>
 
 	<t:if test="state_intro != null">
 	<span class="intro">${state_intro}</span>
@@ -216,7 +215,7 @@ TABS
 	<!-- TABS -->
 	<div id="tabs-container">
 		<input id="tab1" type="radio" name="tabs" checked>
-		<label for="tab1"><span>Lung Cancer Rates</span></label>
+		<label for="tab1" class="first"><span>Lung Cancer Rates</span></label>
 		<input id="tab2" type="radio" name="tabs">
 		<label for="tab2"><span>Lung Cancer Treatment</span></label>
 		<input id="tab3" type="radio" name="tabs">
@@ -535,20 +534,27 @@ TABS
 <script type="text/javascript">
 
 	$("#stateSelectList").on("change", function() {
-		var forceReload = function() {
-			var state = Cookies.get("state");
-			window.location = "http://www.lung.org/dev/our-initiatives/research/monitoring-trends-in-lung-disease/state-of-lung-cancer/states/" + state + ".html";
-		}
-		setTimeout(forceReload, 500);
+	  var forceReload = function() {
+	    var state = Cookies.get("state");
+	    if (window.location.href.includes("/dev/")) {
+	      window.location = "http://www.lung.org/dev/our-initiatives/research/monitoring-trends-in-lung-disease/state-of-lung-cancer/states/" + state + ".html";
+	    } else {
+	      window.location = "http://www.lung.org/our-initiatives/research/monitoring-trends-in-lung-disease/state-of-lung-cancer/states/" + state + ".html";
+	    }
+	  }
+	  setTimeout(forceReload, 500);
 	});
 
 	$("[name='searchZip']").on("submit", function() {
-		var forceReload = function() {
-			var state = Cookies.get("state");
-			window.location = "http://www.lung.org/dev/our-initiatives/research/monitoring-trends-in-lung-disease/state-of-lung-cancer/states/" + state + ".html";
-		}
-		// console.log("asdfasdf");
-		setTimeout(forceReload, 1000);
+	  var forceReload = function() {
+	    var state = Cookies.get("state");
+	    if (window.location.href.includes("/dev/")) {
+	      window.location = "http://www.lung.org/dev/our-initiatives/research/monitoring-trends-in-lung-disease/state-of-lung-cancer/states/" + state + ".html";
+	    } else{
+	      window.location = "http://www.lung.org/our-initiatives/research/monitoring-trends-in-lung-disease/state-of-lung-cancer/states/" + state + ".html";
+	    }
+	  }
+	  setTimeout(forceReload, 1000);
 	})
 
 	$(document).ready(function() {
